@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     public float speed = 25.0F;
-    public float jumpSpeed = 8.0F;
+    
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
 
@@ -33,8 +33,7 @@ public class PlayerMove : MonoBehaviour
             //Multiply it by speed.
             moveDirection *= speed;
             //Jumping
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
+            
 
             if (Input.GetKey(KeyCode.LeftShift))
             {
