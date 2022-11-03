@@ -8,6 +8,9 @@ public class PlayerMove : MonoBehaviour
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
+
+    public bool isSprinting = false;
+    public float sprintingMultiplier;
     
     
 
@@ -33,6 +36,19 @@ public class PlayerMove : MonoBehaviour
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
 
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                isSprinting = true;
+            }
+            else
+            {
+                isSprinting = false;
+            }
+
+            if (isSprinting == true)
+            {
+                moveDirection *= sprintingMultiplier;
+            }
         }
         
         
