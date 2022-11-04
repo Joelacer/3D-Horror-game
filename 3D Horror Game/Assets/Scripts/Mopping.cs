@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Mopping : MonoBehaviour
 {
-    public GameObject Mop;
+    public GameObject Broom;
     public bool isMopping = false;
+    public bool MopisOn;
     public float MopCooldown = 5;
     public float MopCounter = 0;
     public float CleanCounter = 0;
@@ -13,7 +14,8 @@ public class Mopping : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Broom.SetActive(false);
+        MopisOn = false;
     }
 
     // Update is called once per frame
@@ -34,17 +36,14 @@ public class Mopping : MonoBehaviour
 
      void OnTriggerStay(Collider target)
     {
-        //Debug.Log("Diet");
+        
         if (target.tag == "CanMop")
         {
-            if(isMopping == true)
+            if(isMopping == true && MopisOn == true)
             {
                 MopCounter += 1;
                 
             }
-
-            //Debug.Log("Diet");
-            //Destroy(target.gameObject);
 
             if (MopCounter > 150)
             {
@@ -54,7 +53,19 @@ public class Mopping : MonoBehaviour
             }
         }
 
-         
+        if (target.tag == "BroomGet" && Input.GetKey(KeyCode.E) && MopisOn == false)
+        {
+            Broom.SetActive(true);
+            MopisOn = true;
+        }
+
+        if (target.tag == "BroomGet" && Input.GetKey(KeyCode.Q) && MopisOn == true)
+        {
+            Broom.SetActive(false);
+            MopisOn = false;
+        }
+
+
     }
 
     
