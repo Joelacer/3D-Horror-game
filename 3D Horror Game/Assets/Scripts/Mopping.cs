@@ -46,7 +46,7 @@ public class Mopping : MonoBehaviour
             //Debug.Log("Diet");
             //Destroy(target.gameObject);
 
-            if (MopCounter > 250)
+            if (MopCounter > 150)
             {
                 Destroy(target.gameObject);
                 MopCounter = 0;
