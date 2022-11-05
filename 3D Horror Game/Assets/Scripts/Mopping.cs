@@ -9,7 +9,7 @@ public class Mopping : MonoBehaviour
     public bool MopisOn;
     
     public float MopCounter = 0;
-    public float CleanCounter = 0;
+    public int CleanCounter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +17,11 @@ public class Mopping : MonoBehaviour
         Broom.SetActive(false);
         MopisOn = false;
     }
+    public int GetCounter()
+    {
+        return CleanCounter;
+    }
+    
 
     // Update is called once per frame
     void Update()

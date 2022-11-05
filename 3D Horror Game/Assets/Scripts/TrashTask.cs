@@ -6,6 +6,13 @@ public class TrashTask : MonoBehaviour
 {
     public float TrashCounter = 0;
 
+
+
+    public float GetTCounter()
+    {
+        return TrashCounter;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
