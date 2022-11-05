@@ -14,7 +14,8 @@ public class PlayerLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        
+        Vector3 newRotation = new Vector3(0, 0, 0);
+        transform.eulerAngles = newRotation;
     }
 
     // Update is called once per frame
@@ -28,5 +29,8 @@ public class PlayerLook : MonoBehaviour
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerBody.Rotate(Vector3.up * mouseX);
+
+        
+
     }
 }
