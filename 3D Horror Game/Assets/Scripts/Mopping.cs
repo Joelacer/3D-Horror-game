@@ -7,7 +7,7 @@ public class Mopping : MonoBehaviour
     public GameObject Broom;
     public bool isMopping = false;
     public bool MopisOn;
-    public float MopCooldown = 5;
+    
     public float MopCounter = 0;
     public float CleanCounter = 0;
 
@@ -28,6 +28,7 @@ public class Mopping : MonoBehaviour
         else
         {
             isMopping = false;
+            MopCounter = 0;
           
         }
 

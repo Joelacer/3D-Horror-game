@@ -22,7 +22,7 @@ public class DoorAnimation : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 StartCoroutine(StartCooldown());
             }
