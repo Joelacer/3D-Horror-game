@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CanMop
   - BroomGet
+  - Trash
   layers:
   - Default
   - TransparentFX
