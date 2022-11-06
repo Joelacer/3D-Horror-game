@@ -21,18 +21,18 @@ public class SelectionManager : MonoBehaviour
             var selection = hit.transform;
             //var selectionRenderer = selection.GetComponent<Renderer>();
 
-            if (selection.CompareTag("Trash"))
+            if (hit.collider.tag == "Trash")
             {
                 Debug.Log("trash");
             }
-            
 
-            if (selection.CompareTag("Door"))
+            if (hit.collider.tag == "Door")
             {
-                Debug.Log("Door");
+                Debug.Log("door");
             }
 
-            
+
+
         }
     }
 }
