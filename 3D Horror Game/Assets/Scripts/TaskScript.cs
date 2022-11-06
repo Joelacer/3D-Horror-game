@@ -51,7 +51,7 @@ public class TaskScript : MonoBehaviour
             BroomTask = true;
         }
 
-        if (trashtask.GetTCounter() == 4)
+        if (trashtask.GetTCounter() >= 4)
         {
             
             TrashTask = true;

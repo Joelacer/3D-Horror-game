@@ -21,6 +21,11 @@ public class Mopping : MonoBehaviour
     {
         return CleanCounter;
     }
+
+    public bool GetMop()
+    {
+        return MopisOn;
+    }
     
 
     // Update is called once per frame
