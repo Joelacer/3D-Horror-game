@@ -8,6 +8,7 @@ TagManager:
   - BroomGet
   - Trash
   - TrashCan
+  - Door
   layers:
   - Default
   - TransparentFX
