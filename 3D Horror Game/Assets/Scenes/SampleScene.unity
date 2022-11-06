@@ -300,7 +300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &135192812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43c768e42c01aa46a8b472f241d653c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EShow: {fileID: 0}
 --- !u!4 &135192813
 Transform:
   m_ObjectHideFlags: 0
@@ -857,12 +858,12 @@ GameObject:
   - component: {fileID: 420588644}
   - component: {fileID: 420588643}
   m_Layer: 5
-  m_Name: Image
+  m_Name: EShow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &420588642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2925,6 +2926,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.2584767, y: 3.1322207, z: 2.9609375}
   m_Center: {x: 0.105118036, y: -0.5326307, z: 1.6913722}
+--- !u!114 &2050875739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2050875733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43c768e42c01aa46a8b472f241d653c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EShow: {fileID: 420588641}
 --- !u!1 &2054802378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b9c3d3e00b27bf4478014a92389a3299, type: 3}

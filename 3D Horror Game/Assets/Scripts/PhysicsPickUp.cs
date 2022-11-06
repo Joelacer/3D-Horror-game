@@ -11,10 +11,17 @@ public class PhysicsPickUp : MonoBehaviour
     [SerializeField] private float PickupRange;
     private Rigidbody CurrentObject;
 
+    public bool isPickup = false;
+
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public bool GetPickup()
+    {
+        return isPickup;
     }
 
     // Update is called once per frame
@@ -28,13 +35,14 @@ public class PhysicsPickUp : MonoBehaviour
                 CurrentObject = null;
                 return;
             }
-
+            
 
             Ray CameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
             if(Physics.Raycast (CameraRay, out RaycastHit HitInfo, PickupRange, PickupMask))
             {
                 CurrentObject = HitInfo.rigidbody;
                 CurrentObject.useGravity = false;
+                
             }
         }
     }
@@ -47,6 +55,11 @@ public class PhysicsPickUp : MonoBehaviour
             float DistanceToPoint = DirectionToPoint.magnitude;
 
             CurrentObject.velocity = DirectionToPoint * 12f * DistanceToPoint;
+            isPickup = true;
+        }
+        else
+        {
+            isPickup = false;
         }
     }
 }
