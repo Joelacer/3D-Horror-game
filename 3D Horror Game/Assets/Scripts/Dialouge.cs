@@ -9,6 +9,7 @@ public class Dialouge : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     public GameObject dialogebox;
+    public GameObject Person1;
 
     private int index;
 
@@ -35,7 +36,11 @@ public class Dialouge : MonoBehaviour
                 textcomponent.text = lines[index];
             }
         }
+
+        
     }
+
+     
 
     void stratDialouge()
     {

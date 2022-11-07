@@ -9,6 +9,7 @@ TagManager:
   - Trash
   - TrashCan
   - Door
+  - person
   layers:
   - Default
   - TransparentFX
