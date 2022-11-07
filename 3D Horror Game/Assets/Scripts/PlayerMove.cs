@@ -11,13 +11,14 @@ public class PlayerMove : MonoBehaviour
 
     public bool isSprinting = false;
     public float sprintingMultiplier;
+    public GameObject playerAsset;
     
     
 
     // Use this for initialization
     void Start()
     {
-
+        playerAsset.SetActive(false);
     }
 
     // Update is called once per frame
