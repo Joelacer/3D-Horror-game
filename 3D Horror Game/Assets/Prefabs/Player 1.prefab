@@ -149,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2ddd1892ead284c8ff0bc9fbd20f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerCamera: {fileID: 5530230898435015076}
-  CameraPoint: {x: 0, y: 0, z: 0}
+  cameraPoint: {x: 10.5, y: 2, z: 0}
+  targetRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &5530230898435015076
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 200
+  canLook: 0
   playerBody: {fileID: 5530230898053719146}
 --- !u!1 &5530230899850625065
 GameObject:
