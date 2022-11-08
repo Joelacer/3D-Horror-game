@@ -10,6 +10,9 @@ public class Mopping : MonoBehaviour
     
     public float MopCounter = 0;
     public int CleanCounter = 0;
+    public int SoundCooldown = 1;
+
+    bool soundplayed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,7 @@ public class Mopping : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
             isMopping = true;
+            
         }
         else
         {
@@ -42,7 +46,13 @@ public class Mopping : MonoBehaviour
           
         }
 
+        if(isMopping == true && MopisOn == true && soundplayed == false)
+        {
+            StartCoroutine(sound());
+        }
         
+
+
     }
 
      void OnTriggerStay(Collider target)
@@ -79,7 +89,15 @@ public class Mopping : MonoBehaviour
 
     }
 
-    
+    IEnumerator sound()
+    {
+
+        Sound.PlaySound("Broom");
+        soundplayed = true;
+        yield return new WaitForSeconds(SoundCooldown);
+        soundplayed = false;
+
+    }
     
     
 }
