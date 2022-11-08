@@ -631,56 +631,56 @@ MonoBehaviour:
   - {x: 4, y: 0, z: -10}
   - {x: -14, y: 8.5, z: 1}
   - {x: -14, y: 0, z: 1}
-  - {x: -4, y: 7, z: 1}
+  - {x: -4, y: 6.000001, z: 1}
   - {x: -4, y: 0, z: 1}
   - {x: -1, y: 0, z: 1}
   - {x: 0, y: 0, z: 1}
-  - {x: -1, y: 7, z: 1}
+  - {x: -1, y: 6.000001, z: 1}
   - {x: 0, y: 8.5, z: 1}
   - {x: -14, y: 8.5, z: 1}
-  - {x: -4, y: 7, z: 1}
+  - {x: -4, y: 6.000001, z: 1}
   - {x: -14, y: 9, z: 1}
   - {x: -13.25, y: 9, z: 1}
   - {x: -0.75, y: 9, z: 1}
-  - {x: -1, y: 7, z: 1}
+  - {x: -1, y: 6.000001, z: 1}
   - {x: 0, y: 9, z: 1}
   - {x: 0, y: 8.5, z: 1}
-  - {x: -4, y: 7, z: 1}
-  - {x: -1, y: 7, z: 1}
+  - {x: -4, y: 6.000001, z: 1}
+  - {x: -1, y: 6.000001, z: 1}
   - {x: -13.25, y: 9, z: 1}
   - {x: -0.75, y: 9, z: 1}
   - {x: -14, y: 8.5, z: 0}
-  - {x: -4, y: 7, z: 0}
+  - {x: -4, y: 6.000001, z: 0}
   - {x: -14, y: 0, z: 0}
   - {x: -4, y: 0, z: 0}
   - {x: -1, y: 0, z: 0}
-  - {x: -1, y: 7, z: 0}
+  - {x: -1, y: 6.000001, z: 0}
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 8.5, z: 0}
   - {x: -14, y: 8.5, z: 0}
   - {x: -14, y: 9, z: 0}
-  - {x: -4, y: 7, z: 0}
+  - {x: -4, y: 6.000001, z: 0}
   - {x: -13.25, y: 9, z: 0}
   - {x: -0.75, y: 9, z: 0}
   - {x: 0, y: 9, z: 0}
-  - {x: -1, y: 7, z: 0}
+  - {x: -1, y: 6.000001, z: 0}
   - {x: 0, y: 8.5, z: 0}
-  - {x: -4, y: 7, z: 0}
+  - {x: -4, y: 6.000001, z: 0}
   - {x: -13.25, y: 9, z: 0}
-  - {x: -1, y: 7, z: 0}
+  - {x: -1, y: 6.000001, z: 0}
   - {x: -0.75, y: 9, z: 0}
-  - {x: -1, y: 7, z: 1}
-  - {x: -4, y: 7, z: 1}
-  - {x: -1, y: 7, z: 0}
-  - {x: -4, y: 7, z: 0}
+  - {x: -1, y: 6.000001, z: 1}
+  - {x: -4, y: 6.000001, z: 1}
+  - {x: -1, y: 6.000001, z: 0}
+  - {x: -4, y: 6.000001, z: 0}
   - {x: -1, y: 0, z: 0}
   - {x: -1, y: 0, z: 1}
-  - {x: -1, y: 7, z: 0}
-  - {x: -1, y: 7, z: 1}
+  - {x: -1, y: 6.000001, z: 0}
+  - {x: -1, y: 6.000001, z: 1}
   - {x: -4, y: 0, z: 1}
   - {x: -4, y: 0, z: 0}
-  - {x: -4, y: 7, z: 1}
-  - {x: -4, y: 7, z: 0}
+  - {x: -4, y: 6.000001, z: 1}
+  - {x: -4, y: 6.000001, z: 0}
   - {x: 4, y: 9, z: 0}
   - {x: 4, y: 0, z: 0}
   - {x: 4, y: 9, z: -2}
@@ -732,43 +732,43 @@ MonoBehaviour:
   - {x: -10, y: 0}
   - {x: 0, y: 8.5}
   - {x: 0, y: 0}
-  - {x: -10, y: 7}
+  - {x: -10, y: 6.000001}
   - {x: -10, y: 0}
   - {x: -13, y: 0}
   - {x: -14, y: 0}
-  - {x: -13, y: 7}
+  - {x: -13, y: 6.000001}
   - {x: -14, y: 8.5}
   - {x: 0, y: 8.5}
-  - {x: -10, y: 7}
+  - {x: -10, y: 6.000001}
   - {x: 0, y: 9}
   - {x: -0.75, y: 9}
   - {x: -13.25, y: 9}
-  - {x: -13, y: 7}
+  - {x: -13, y: 6.000001}
   - {x: -14, y: 9}
   - {x: -14, y: 8.5}
-  - {x: -10, y: 7}
-  - {x: -13, y: 7}
+  - {x: -10, y: 6.000001}
+  - {x: -13, y: 6.000001}
   - {x: -0.75, y: 9}
   - {x: -13.25, y: 9}
   - {x: 0, y: 8.5}
-  - {x: 10, y: 7}
+  - {x: 10, y: 6.000001}
   - {x: 0, y: 0}
   - {x: 10, y: 0}
   - {x: 13, y: 0}
-  - {x: 13, y: 7}
+  - {x: 13, y: 6.000001}
   - {x: 14, y: 0}
   - {x: 14, y: 8.5}
   - {x: 0, y: 8.5}
   - {x: 0, y: 9}
-  - {x: 10, y: 7}
+  - {x: 10, y: 6.000001}
   - {x: 0.75, y: 9}
   - {x: 13.25, y: 9}
   - {x: 14, y: 9}
-  - {x: 13, y: 7}
+  - {x: 13, y: 6.000001}
   - {x: 14, y: 8.5}
-  - {x: 10, y: 7}
+  - {x: 10, y: 6.000001}
   - {x: 0.75, y: 9}
-  - {x: 13, y: 7}
+  - {x: 13, y: 6.000001}
   - {x: 13.25, y: 9}
   - {x: -13, y: 1}
   - {x: -10, y: 1}
@@ -776,12 +776,12 @@ MonoBehaviour:
   - {x: -10, y: 0}
   - {x: 0, y: 0}
   - {x: -1, y: 0}
-  - {x: 0, y: 7}
-  - {x: -1, y: 7}
+  - {x: 0, y: 6.000001}
+  - {x: -1, y: 6.000001}
   - {x: 1, y: 0}
   - {x: 0, y: 0}
-  - {x: 1, y: 7}
-  - {x: 0, y: 7}
+  - {x: 1, y: 6.000001}
+  - {x: 0, y: 6.000001}
   - {x: 0, y: 9}
   - {x: 0, y: 0}
   - {x: -2, y: 9}
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2274
+  m_VersionIndex: 2439
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 582
+  m_VersionIndex: 585
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2267,7 +2267,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1343
+  m_VersionIndex: 1346
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2687,7 +2687,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 811
+  m_VersionIndex: 814
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2977,7 +2977,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 838
+  m_VersionIndex: 841
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 440
+  m_VersionIndex: 443
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

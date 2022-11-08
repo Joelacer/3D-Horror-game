@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mixutest : MonoBehaviour
+public class ComputerCamera : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
