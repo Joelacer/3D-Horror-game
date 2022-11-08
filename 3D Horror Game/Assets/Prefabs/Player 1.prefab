@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 5530230898053719147}
   - component: {fileID: 5530230898053719061}
   - component: {fileID: 5530230898053719060}
+  - component: {fileID: 197543504}
+  - component: {fileID: 197543505}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -101,6 +103,7 @@ MonoBehaviour:
   gravity: 20
   isSprinting: 0
   sprintingMultiplier: 2
+  playerAsset: {fileID: 5530230899850625065}
 --- !u!114 &5530230898053719060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +123,34 @@ MonoBehaviour:
   PickupTarget: {fileID: 5530230897876550238}
   PickupRange: 10
   isPickup: 0
+--- !u!114 &197543504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530230898053719145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b43c768e42c01aa46a8b472f241d653c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EShow: {fileID: 0}
+  QShow: {fileID: 0}
+--- !u!114 &197543505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530230898053719145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb2ddd1892ead284c8ff0bc9fbd20f3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerCamera: {fileID: 5530230898435015076}
+  CameraPoint: {x: 0, y: 0, z: 0}
 --- !u!1 &5530230898435015076
 GameObject:
   m_ObjectHideFlags: 0

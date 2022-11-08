@@ -25,7 +25,13 @@ public class SelectionManager : MonoBehaviour
          
         }
 
-        
+        //Computer the player uses 
+        if (other.tag == "Computer")
+        {
+            EShow.SetActive(true);
+            
+        }
+
 
         if (other.tag == "Door")
         {
@@ -57,6 +63,12 @@ public class SelectionManager : MonoBehaviour
         if (other.tag == "Trash")
         {
             EShow.SetActive(false);
+        }
+
+        if (other.tag == "Computer")
+        {
+            EShow.SetActive(false);
+
         }
 
         if (other.tag == "Door")
