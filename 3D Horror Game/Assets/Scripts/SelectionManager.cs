@@ -96,6 +96,7 @@ public class SelectionManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("yes");
         EShow.SetActive(false);
         QShow.SetActive(false);
     }

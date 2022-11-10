@@ -902,7 +902,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3370
+  m_VersionIndex: 3379
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -1104,6 +1104,10 @@ PrefabInstance:
     - target: {fileID: 5718382191547611116, guid: a159f7c6a9d9072428417d7567f530e0, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9150046780572080862, guid: a159f7c6a9d9072428417d7567f530e0, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     - target: {fileID: 9150046780572080862, guid: a159f7c6a9d9072428417d7567f530e0, type: 3}
       propertyPath: m_StaticEditorFlags

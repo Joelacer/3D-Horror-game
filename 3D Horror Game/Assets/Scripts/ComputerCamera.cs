@@ -19,7 +19,7 @@ public class ComputerCamera : MonoBehaviour
     {
         playerLook = GameObject.Find("Main Camera").GetComponent<PlayerLook>();
         playerCamera = GameObject.Find("Main Camera");
-        playerMove = GameObject.Find("Player 1").GetComponent<PlayerMove>();
+        playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
     }
 
 
