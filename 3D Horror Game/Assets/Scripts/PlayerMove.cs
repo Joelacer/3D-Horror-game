@@ -12,6 +12,7 @@ public class PlayerMove : MonoBehaviour
     public bool isSprinting = false;
     public float sprintingMultiplier;
     public GameObject playerAsset;
+    public bool canMove = true;
     
     
 
@@ -24,37 +25,42 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CharacterController controller = GetComponent<CharacterController>();
-        // is the controller on the ground?
-        if (controller.isGrounded)
+        if(canMove == true)
         {
-            //Feed moveDirection with input.
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            //Multiply it by speed.
-            moveDirection *= speed;
-            //Jumping
-            
+            CharacterController controller = GetComponent<CharacterController>();
+            // is the controller on the ground?
+            if (controller.isGrounded)
+            {
+                //Feed moveDirection with input.
+                moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                moveDirection = transform.TransformDirection(moveDirection);
+                //Multiply it by speed.
+                moveDirection *= speed;
+                //Jumping
 
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                isSprinting = true;
-            }
-            else
-            {
-                isSprinting = false;
+
+                if (Input.GetKey(KeyCode.LeftShift))
+                {
+                    isSprinting = true;
+                }
+                else
+                {
+                    isSprinting = false;
+                }
+
+                if (isSprinting == true)
+                {
+                    moveDirection *= sprintingMultiplier;
+                }
             }
 
-            if (isSprinting == true)
-            {
-                moveDirection *= sprintingMultiplier;
-            }
+
+            //Applying gravity to the controller
+            moveDirection.y -= gravity * Time.deltaTime;
+            //Making the character move
+            controller.Move(moveDirection * Time.deltaTime);
         }
+
         
-        
-        //Applying gravity to the controller
-        moveDirection.y -= gravity * Time.deltaTime;
-        //Making the character move
-        controller.Move(moveDirection * Time.deltaTime);
     }
 }

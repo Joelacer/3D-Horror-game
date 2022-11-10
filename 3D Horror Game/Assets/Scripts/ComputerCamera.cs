@@ -5,15 +5,21 @@ using UnityEngine;
 public class ComputerCamera : MonoBehaviour
 {
     PlayerLook playerLook;
-    //[SerializeField] GameObject playerCamera;
+    PlayerMove playerMove;
+    GameObject playerCamera;
+
+    bool onComputer;
 
     public Vector3 cameraPoint;
     public Vector3 targetRotation;
 
-    
-    void Awake() // Finds the Camera and yoinks the PlayerLook script
+
+
+    void Awake()
     {
         playerLook = GameObject.Find("Main Camera").GetComponent<PlayerLook>();
+        playerCamera = GameObject.Find("Main Camera");
+        playerMove = GameObject.Find("Player 1").GetComponent<PlayerMove>();
     }
 
 
@@ -21,21 +27,27 @@ public class ComputerCamera : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-
         if (other.tag == "Computer")
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-               playerLook.canLook = false;
-               StartCoroutine(onComputer(cameraPoint, 2));
-               StartCoroutine(LerpFunction(Quaternion.Euler(targetRotation), 2));
+
+                playerLook.canLook = false;
+                playerMove.canMove = false;
+                onComputer = true;
+                StartCoroutine(toComputer(cameraPoint, 1));
+                StartCoroutine(LerpFunction(Quaternion.Euler(targetRotation), 1));
+                //I was very upset while doing this one so ignore the name
+                StartCoroutine(rotateShit());
+
             }
             
         }
 
     }
 
-    IEnumerator onComputer(Vector3 targetPosition, float duration)
+
+    IEnumerator toComputer(Vector3 targetPosition, float duration) //Movement
     {
         float time = 0;
         Vector3 startPosition = transform.position;
@@ -47,21 +59,41 @@ public class ComputerCamera : MonoBehaviour
         }
         transform.position = targetPosition;
 
-        playerLook.canLook = true;
     }
 
 
-    IEnumerator LerpFunction(Quaternion endValue, float duration)
+    IEnumerator LerpFunction(Quaternion endValue, float duration) //Rotation
     {
         float time = 0;
         Quaternion startValue = transform.rotation;
         while (time < duration)
-        {
-            transform.rotation = Quaternion.Lerp(startValue, endValue, time / duration);
-            time += Time.deltaTime;
-            yield return null;
-        }
+    {
+        transform.rotation = Quaternion.Lerp(startValue, endValue, time / duration);
+        time += Time.deltaTime;
+        yield return null;
+    }
         transform.rotation = endValue;
+
+    }
+
+
+    IEnumerator rotateShit()
+    {
+        playerCamera.transform.localRotation = Quaternion.Euler(10f, 0f, 0f);
+        yield return new WaitForSeconds(0);
+    }
+
+    private void Update()
+    {
+        if (onComputer == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                playerLook.canLook = true;
+                playerMove.canMove = true;
+                onComputer = false;
+            }
+        }
     }
 }
 
