@@ -3675,6 +3675,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 197543504, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
+      propertyPath: EShow
+      value: 
+      objectReference: {fileID: 420588641}
+    - target: {fileID: 197543504, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
+      propertyPath: QShow
+      value: 
+      objectReference: {fileID: 990032912}
     - target: {fileID: 5530230898053719061, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: playerAsset
       value: 

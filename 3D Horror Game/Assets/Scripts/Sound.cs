@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioClip Broom;
+    public static AudioClip Broom, DoorOpen, DoorClose;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -13,7 +13,8 @@ public class Sound : MonoBehaviour
 
 
         Broom = Resources.Load<AudioClip>("Broom");
-        
+        DoorOpen = Resources.Load<AudioClip>("DoorOpen");
+        DoorClose = Resources.Load<AudioClip>("DoorClose");
 
 
         audioSrc = GetComponent<AudioSource>();
@@ -35,7 +36,15 @@ public class Sound : MonoBehaviour
                 audioSrc.PlayOneShot(Broom);
                 break;
 
-            
+            case "DoorOpen":
+                audioSrc.PlayOneShot(DoorOpen);
+                break;
+
+            case "DoorClose":
+                audioSrc.PlayOneShot(DoorClose);
+                break;
+
+
         }
     }
 

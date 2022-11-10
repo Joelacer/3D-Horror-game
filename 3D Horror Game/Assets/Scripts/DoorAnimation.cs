@@ -6,6 +6,10 @@ public class DoorAnimation : MonoBehaviour
 {
     Animator animator;
 
+    bool SoundPlayed = false;
+    bool ClosePlayed = false;
+    bool allsoundPlayed = true;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,13 +31,35 @@ public class DoorAnimation : MonoBehaviour
                 StartCoroutine(StartCooldown());
             }
             
+            if (allsoundPlayed == true)
+            {
+                SoundPlayed = false;
+                ClosePlayed = false;
+            }
         }
     }
 
     public IEnumerator StartCooldown()
     {
+        allsoundPlayed = false;
         animator.SetBool("isOpening", true);
+
+        if (SoundPlayed == false)
+        {
+            Sound.PlaySound("DoorOpen");
+            SoundPlayed = true;
+        }
+        
         yield return new WaitForSeconds(5);
         animator.SetBool("isOpening", false);
+
+        if (ClosePlayed == false)
+        {
+            ClosePlayed = true;
+            Sound.PlaySound("DoorClose");
+            
+        }
+
+        allsoundPlayed = true;
     }
 }
