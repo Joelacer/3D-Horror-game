@@ -7,11 +7,13 @@ public class ComputerCamera : MonoBehaviour
     PlayerLook playerLook;
     PlayerMove playerMove;
     GameObject playerCamera;
+    //ComputerScreen computerScreen;
 
-    bool onComputer;
+    public bool onComputer;
 
     public Vector3 cameraPoint;
     public Vector3 targetRotation;
+    public GameObject computerScreen;
 
 
 
@@ -20,6 +22,7 @@ public class ComputerCamera : MonoBehaviour
         playerLook = GameObject.Find("Main Camera").GetComponent<PlayerLook>();
         playerCamera = GameObject.Find("Main Camera");
         playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
+        //computerScreen = GameObject.Find("ComputerScreen").GetComponent<ComputerScreen>();
     }
 
 
@@ -29,7 +32,7 @@ public class ComputerCamera : MonoBehaviour
 
         if (other.tag == "Computer")
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
 
                 playerLook.canLook = false;
@@ -80,20 +83,12 @@ public class ComputerCamera : MonoBehaviour
     IEnumerator rotateShit()
     {
         playerCamera.transform.localRotation = Quaternion.Euler(10f, 0f, 0f);
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(1);
+        computerScreen.SetActive(true);
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
-    private void Update()
-    {
-        if (onComputer == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                playerLook.canLook = true;
-                playerMove.canMove = true;
-                onComputer = false;
-            }
-        }
-    }
+    
+    
 }
 
