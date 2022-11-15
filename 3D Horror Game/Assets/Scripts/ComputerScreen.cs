@@ -12,7 +12,9 @@ public class ComputerScreen : MonoBehaviour
     
 
     public GameObject ComputerCanvas;
+    public GameObject ColorGame;
 
+    bool Startcolorgame = false;
 
 
     // Start is called before the first frame update
@@ -28,15 +30,27 @@ public class ComputerScreen : MonoBehaviour
     public void ExitComputer()
     {
         ComputerCanvas.SetActive(false);
+        ColorGame.SetActive(false);
         playerLook.canLook = true;
         playerMove.canMove = true;
         Cursor.lockState = CursorLockMode.Locked;
         playerOnComputer.onComputer = false;
     }
 
+    public void OpenColorGame()
+    {
+        ColorGame.SetActive(true);
+        Startcolorgame = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public bool GetStartColorgame()
+    {
+        return Startcolorgame;
     }
 }
