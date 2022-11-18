@@ -746,6 +746,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorgame: {fileID: 207528715}
+  game1: 0
+  game2: 0
+  game3: 0
   Showgame1: {fileID: 1438205165}
   Showgame2: {fileID: 113475121}
   Showgame3: {fileID: 218291176}
