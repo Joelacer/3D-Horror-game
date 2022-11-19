@@ -9,6 +9,7 @@ public class DoorAnimation : MonoBehaviour
     bool SoundPlayed = false;
     bool ClosePlayed = false;
     bool allsoundPlayed = true;
+    float bugwait = 0.3f;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +60,7 @@ public class DoorAnimation : MonoBehaviour
             Sound.PlaySound("DoorClose");
             
         }
-
+        yield return new WaitForSeconds(bugwait);
         allsoundPlayed = true;
     }
 }
