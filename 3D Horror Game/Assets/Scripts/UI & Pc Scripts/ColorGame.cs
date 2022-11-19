@@ -27,7 +27,7 @@ public class ColorGame : MonoBehaviour
         game1 = true;
         computerScreen = GameObject.Find("ComputerScreen").GetComponent<ComputerScreen>();
     }
-
+    
     void Update()
     {
         
@@ -71,7 +71,7 @@ public class ColorGame : MonoBehaviour
         {
             game2 = false;
             Debug.Log("Win2");
-
+          
             game3 = true;
 
             Showgame2.SetActive(false);
