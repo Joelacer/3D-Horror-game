@@ -9,7 +9,9 @@ public class Dialouge : MonoBehaviour
     public string[] lines;
     public float textSpeed;
     public GameObject dialogebox;
-    public GameObject Person1;
+
+   
+    
 
     private int index;
 
@@ -40,7 +42,9 @@ public class Dialouge : MonoBehaviour
         
     }
 
-     
+    
+
+
 
     void stratDialouge()
     {
@@ -68,6 +72,7 @@ public class Dialouge : MonoBehaviour
         else
         {
             dialogebox.SetActive(false);
+            
         }
     }
 }

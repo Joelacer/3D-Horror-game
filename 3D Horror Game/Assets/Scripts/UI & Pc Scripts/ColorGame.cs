@@ -21,6 +21,19 @@ public class ColorGame : MonoBehaviour
     public  float yellow = 0;
     public float green = 0;
 
+    
+    public bool GetGame1()
+    {
+        return game1;
+    }
+    public bool GetGame2()
+    {
+        return game2;
+    }
+    public bool GetGame3()
+    {
+        return game3;
+    }
 
     void Awake()
     {
@@ -119,6 +132,7 @@ public class ColorGame : MonoBehaviour
             if(red == 0 && yellow == 0 && green == 0)
             {
                 blue += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -126,6 +140,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
         }
@@ -135,6 +150,7 @@ public class ColorGame : MonoBehaviour
             if(green == 1 && red == 0 && yellow == 0)
             {
                 blue += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -142,6 +158,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
         }
 
@@ -150,6 +167,7 @@ public class ColorGame : MonoBehaviour
             if (green == 1 && red == 0 && yellow == 1)
             {
                 blue += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -157,6 +175,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
         }
 
@@ -169,6 +188,7 @@ public class ColorGame : MonoBehaviour
             if(blue == 1 && yellow == 1 && green == 1)
             {
                 red += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -176,6 +196,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
         }
@@ -185,6 +206,7 @@ public class ColorGame : MonoBehaviour
             if(blue == 1 && yellow == 0 && green == 1)
             {
                 red += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -192,6 +214,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
         }
@@ -201,6 +224,7 @@ public class ColorGame : MonoBehaviour
             if (blue == 1 && yellow == 1 && green == 1)
             {
                 red += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -208,6 +232,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
         }
@@ -221,6 +246,7 @@ public class ColorGame : MonoBehaviour
             if(blue == 1 && red == 0 && green == 1)
             {
                 yellow += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -228,6 +254,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
         }
@@ -237,8 +264,17 @@ public class ColorGame : MonoBehaviour
             if(blue == 1 && red == 1 && green == 1)
             {
                 yellow += 1;
+                Sound.PlaySound("Button");
             }
-            
+            else
+            {
+                blue = 0;
+                red = 0;
+                yellow = 0;
+                green = 0;
+                Sound.PlaySound("ButtonWrong");
+            }
+
 
         }
 
@@ -247,6 +283,7 @@ public class ColorGame : MonoBehaviour
             if (blue == 0 && red == 0 && green == 1)
             {
                 yellow += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -254,6 +291,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
         }
@@ -267,6 +305,7 @@ public class ColorGame : MonoBehaviour
             if(blue == 1 && yellow == 0 && red == 0)
             {
                 green += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -274,6 +313,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
 
@@ -284,6 +324,7 @@ public class ColorGame : MonoBehaviour
             if(blue == 0 && yellow == 0 && red == 0)
             {
                 green += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -291,6 +332,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
 
@@ -300,6 +342,7 @@ public class ColorGame : MonoBehaviour
             if (blue == 0 && yellow == 0 && red == 0)
             {
                 green += 1;
+                Sound.PlaySound("Button");
             }
             else
             {
@@ -307,6 +350,7 @@ public class ColorGame : MonoBehaviour
                 red = 0;
                 yellow = 0;
                 green = 0;
+                Sound.PlaySound("ButtonWrong");
             }
 
 
