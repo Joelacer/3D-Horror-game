@@ -13,17 +13,8 @@ public class PlayerMove : MonoBehaviour
     public float sprintingMultiplier;
     public GameObject playerAsset;
     public bool canMove = true;
-
-    bool walking = false;
     
-    public bool GetWalk()
-    {
-        return walking;
-    }
-    public bool GetRun()
-    {
-        return isSprinting;
-    }
+    
 
     // Use this for initialization
     void Start()
@@ -46,15 +37,7 @@ public class PlayerMove : MonoBehaviour
                 //Multiply it by speed.
                 moveDirection *= speed;
                 //Jumping
-                
-                if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D))
-                {
-                    walking = true;
-                }
-                else
-                {
-                    walking = false;
-                }
+
 
                 if (Input.GetKey(KeyCode.LeftShift))
                 {
@@ -70,7 +53,6 @@ public class PlayerMove : MonoBehaviour
                     moveDirection *= sprintingMultiplier;
                 }
             }
-            
 
 
             //Applying gravity to the controller
