@@ -186,8 +186,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb2ddd1892ead284c8ff0bc9fbd20f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPoint: {x: 10.5, y: 1.7, z: 1}
+  onComputer: 0
+  cameraPoint: {x: 10.5, y: 1.7, z: 1.5}
   targetRotation: {x: 0, y: 0, z: 0}
+  computerScreen: {fileID: 0}
 --- !u!65 &2050875738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -237,7 +239,6 @@ MonoBehaviour:
   - Idiot
   textSpeed: 0.2
   dialogebox: {fileID: 0}
-  Person1: {fileID: 0}
 --- !u!1 &5530230898435015076
 GameObject:
   m_ObjectHideFlags: 0

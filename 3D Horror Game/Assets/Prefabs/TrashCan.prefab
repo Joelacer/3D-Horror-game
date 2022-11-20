@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2020525902922822834}
   - component: {fileID: 2020525902922822833}
   m_Layer: 0
-  m_Name: mesh1659961682
+  m_Name: TrashCan
   m_TagString: TrashCan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
