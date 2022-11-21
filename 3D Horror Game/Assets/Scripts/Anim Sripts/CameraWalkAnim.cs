@@ -35,10 +35,12 @@ public class CameraWalkAnim : MonoBehaviour
         if (playerMove.GetRun() == true)
         {
             animator.SetBool("IsRuning", true);
+           
         }
         if (playerMove.GetRun() == false)
         {
             animator.SetBool("IsRuning", false);
+            
         }
     }
 
@@ -52,8 +54,6 @@ public class CameraWalkAnim : MonoBehaviour
             walkPlayed = false;
             
         }
-        
-            
-        
+    
     }
 }
