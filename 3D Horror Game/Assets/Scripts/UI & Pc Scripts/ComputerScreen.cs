@@ -13,8 +13,10 @@ public class ComputerScreen : MonoBehaviour
 
     public GameObject ComputerCanvas;
     public GameObject ColorGame;
+    public GameObject SortGame;
 
     bool Startcolorgame = false;
+    //bool StartSortgame = false;
 
 
     // Start is called before the first frame update
@@ -41,6 +43,12 @@ public class ComputerScreen : MonoBehaviour
     {
         ColorGame.SetActive(true);
         Startcolorgame = true;
+    }
+
+    public void OpenSortGame()
+    {
+        SortGame.SetActive(true);
+        //StartSortgame = true;
     }
 
     // Update is called once per frame
