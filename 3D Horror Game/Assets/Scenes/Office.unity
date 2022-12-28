@@ -418,6 +418,14 @@ PrefabInstance:
       propertyPath: computerScreen
       value: 
       objectReference: {fileID: 321697864}
+    - target: {fileID: 1797150405, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1797150409, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2050875743, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: dialogebox
       value: 
@@ -1772,7 +1780,7 @@ GameObject:
   - component: {fileID: 459507778}
   - component: {fileID: 459507780}
   m_Layer: 5
-  m_Name: line
+  m_Name: TIMER
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6134,7 +6142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1319947039
 MonoBehaviour:
   m_ObjectHideFlags: 0

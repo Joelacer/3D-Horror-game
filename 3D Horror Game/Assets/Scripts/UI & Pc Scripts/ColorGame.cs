@@ -35,15 +35,26 @@ public class ColorGame : MonoBehaviour
         return game3;
     }
 
+    timer Timer;
+
     void Awake()
     {
         game1 = true;
         computerScreen = GameObject.Find("ComputerScreen").GetComponent<ComputerScreen>();
+        Timer = GameObject.Find("TIMER").GetComponent<timer>();
     }
     
     void Update()
     {
+        if (Timer.GetREopengame() == true)
+        {
+            game1 = true;
+            game2 = false;
+            game3 = false;
+        }
         
+       
+
         
         if (computerScreen.GetStartColorgame() == true)
         {
@@ -122,6 +133,10 @@ public class ColorGame : MonoBehaviour
             }
         }
 
+        if (game1 == false && game2 == false && game3 == false)
+        {
+            game1 = true;
+        }
 
     }
 

@@ -14,6 +14,13 @@ public class timer : MonoBehaviour
     bool regengame2USED = false;
     bool regengame3USED = false;
 
+    bool REopengame = false;
+
+    public bool GetREopengame()
+    {
+        return REopengame;
+    }
+
     ColorGame colorgameSC;
     
 
@@ -38,16 +45,19 @@ public class timer : MonoBehaviour
             {
                 timeleft = maxTime;
                 regengame1USED = true;
+                REopengame = false;
             }
             if (colorgameSC.GetGame2() == true && regengame2USED == false)
             {
                 timeleft = maxTime;
                 regengame2USED = true;
+                
             }
             if (colorgameSC.GetGame3() == true && regengame3USED == false)
             {
                 timeleft = maxTime;
                 regengame3USED = true;
+                
             }
 
         }
@@ -57,7 +67,18 @@ public class timer : MonoBehaviour
             UI.SetActive(false);
             regengame2USED = false;
             regengame3USED = false;
+            regengame1USED = false;
             timeleft = maxTime;
+            
+            if (colorgameSC.GetGame2() == true || colorgameSC.GetGame3() == true)
+            {
+                REopengame = true;
+            }
+            else if (colorgameSC.GetGame1() == true)
+            {
+                REopengame = false;
+            }
+
         }
 
         
