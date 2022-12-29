@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class DragANDDrop : MonoBehaviour
+public class Drag : MonoBehaviour
 {
     Vector3 mousePositionOffset;
 
@@ -21,15 +21,15 @@ public class DragANDDrop : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        transform.position = GetMouseWorldPosition() + mousePositionOffset ;
+        transform.position = GetMouseWorldPosition() + mousePositionOffset;
         Debug.Log("1");
- 
+
     }
 
-   
-    
-    
-    
+
+
+
+
 
 
 
@@ -49,6 +49,6 @@ public class DragANDDrop : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
