@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step;
+    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -18,6 +18,8 @@ public class Sound : MonoBehaviour
         Button = Resources.Load<AudioClip>("Button");
         ButtonWrong = Resources.Load<AudioClip>("ButtonWrong");
         Step = Resources.Load<AudioClip>("Step");
+
+        CanIHelpU = Resources.Load<AudioClip>("CanIHelpU");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -54,6 +56,9 @@ public class Sound : MonoBehaviour
                 audioSrc.PlayOneShot(ButtonWrong);
                 break;
 
+
+
+
             case "Step":
                 audioSrc.Play();
                 audioSrc.PlayOneShot(Step);
@@ -68,6 +73,11 @@ public class Sound : MonoBehaviour
                 break;
 
 
+
+
+            case "CanIHelpU":
+                audioSrc.PlayOneShot(CanIHelpU);
+                break;
         }
     }
 

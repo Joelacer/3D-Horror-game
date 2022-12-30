@@ -428,11 +428,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2050875738, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: m_Size.x
-      value: 0.89763606
+      value: 1.0055777
       objectReference: {fileID: 0}
     - target: {fileID: 2050875738, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: m_Size.y
-      value: 0.5847485
+      value: 4.1156363
       objectReference: {fileID: 0}
     - target: {fileID: 2050875738, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: m_Size.z
@@ -444,11 +444,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2050875738, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: m_Center.x
-      value: 0.071315765
+      value: 0.017344952
       objectReference: {fileID: 0}
     - target: {fileID: 2050875738, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: m_Center.y
-      value: 1.2844397
+      value: -0.481004
       objectReference: {fileID: 0}
     - target: {fileID: 2050875738, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
       propertyPath: m_Center.z
@@ -7864,6 +7864,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1660460355}
   m_CullTransparentMesh: 1
+--- !u!1 &1677794871 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5530230898053719145, guid: cd5c5a7f323ef4442be52a9f21963592, type: 3}
+  m_PrefabInstance: {fileID: 197543502}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1700195268
 Mesh:
   m_ObjectHideFlags: 0
@@ -11024,7 +11029,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132147829013606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.38, y: 0.23, z: -20.34}
+  m_LocalPosition: {x: 37.38, y: 0.23, z: -20.29}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -11336,6 +11341,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450651813553884}
+  - component: {fileID: 919132147829013608}
+  - component: {fileID: 919132147829013607}
   m_Layer: 0
   m_Name: Casual_Hoodie
   m_TagString: Untagged
@@ -11343,6 +11350,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132147829013607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147829013606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8c9d56f80f5116429baed3180d0b37a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1677794871}
+--- !u!65 &919132147829013608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147829013606}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0930691, y: 2.3070364, z: 1.2024078}
+  m_Center: {x: 0.04653454, y: 0.65351725, z: 0.0020608902}
 --- !u!4 &952076724195663368
 Transform:
   m_ObjectHideFlags: 0
