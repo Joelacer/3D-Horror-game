@@ -17,6 +17,7 @@ public class OptionCanvas : MonoBehaviour
 
     public void Leave()
     {
+        First = false;
         ALL.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
     }

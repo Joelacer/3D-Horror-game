@@ -11,6 +11,8 @@ public class personTalk : MonoBehaviour
 
     OptionCanvas option;
 
+    bool waitused = false;
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject == Player && Input.GetKey(KeyCode.E))
@@ -26,12 +28,17 @@ public class personTalk : MonoBehaviour
             //Option.SetActive(true);
             StartCoroutine(Wait());
         }
+        
     }
 
     IEnumerator Wait()
     {
-        yield return new WaitForSeconds(1);
-        Option.SetActive(true);
+        if (waitused == false)
+        {
+            yield return new WaitForSeconds(1);
+            Option.SetActive(true);
+            waitused = true;
+        }
     }
 
 
@@ -54,7 +61,7 @@ public class personTalk : MonoBehaviour
     {
         if(option.GetFirst() == true)
         {
-            First.SetActive(false);
+            //First.SetActive(false);
         }
     }
 }

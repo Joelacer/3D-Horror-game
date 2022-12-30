@@ -57,20 +57,12 @@ public class Sound : MonoBehaviour
                 break;
 
 
-
-
             case "Step":
-                audioSrc.Play();
+                
                 audioSrc.PlayOneShot(Step);
                 break;
 
-            case "StepStop":
-                audioSrc.Stop();
-                break;
-
-            case "StepPlay":
-                audioSrc.Play();
-                break;
+           
 
 
 
