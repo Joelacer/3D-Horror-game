@@ -14,6 +14,7 @@ public class ComputerScreen : MonoBehaviour
     public GameObject ComputerCanvas;
     public GameObject ColorGame;
     public GameObject SortGame;
+    public GameObject FixGame;
 
     bool Startcolorgame = false;
     //bool StartSortgame = false;
@@ -49,6 +50,11 @@ public class ComputerScreen : MonoBehaviour
     {
         SortGame.SetActive(true);
         //StartSortgame = true;
+    }
+
+    public void OpenFixGame()
+    {
+        FixGame.SetActive(true);
     }
 
     // Update is called once per frame
