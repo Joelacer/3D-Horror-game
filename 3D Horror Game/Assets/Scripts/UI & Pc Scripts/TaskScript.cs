@@ -6,6 +6,8 @@ public class TaskScript : MonoBehaviour
 {
     public GameObject TrashCan;
 
+    
+
     Mopping mopping;
     TrashTask trashtask;
 
@@ -14,9 +16,14 @@ public class TaskScript : MonoBehaviour
     public GameObject CheckBroom;
     public GameObject CheckTrash;
 
+    public GameObject showtask;
+
+    
+
     // Start is called before the first frame update
     void Awake()
     {
+        
         mopping = GameObject.Find("Player").GetComponent <Mopping>();
         trashtask = TrashCan.GetComponent<TrashTask>();
     }
@@ -60,7 +67,11 @@ public class TaskScript : MonoBehaviour
         {
             TrashTask = false;
         }
+
+
+
     }
 
+   
 
 }
