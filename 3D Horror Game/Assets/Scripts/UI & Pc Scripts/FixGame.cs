@@ -91,7 +91,10 @@ public class FixGame : MonoBehaviour
 
     public void File2()
     {
-        StartCoroutine(file2());
+        if (CanDo2 == true)
+        {
+            StartCoroutine(file2());
+        }
     }
 
     IEnumerator file2()
@@ -102,12 +105,16 @@ public class FixGame : MonoBehaviour
         Fixing2.SetActive(false);
         Fixed2.SetActive(true);
         ToPhase3 += 1;
+        CanDo2 = false;
 
     }
 
     public void File3()
     {
-        StartCoroutine(file3());
+        if (CanDo3 == true)
+        {
+            StartCoroutine(file3());
+        }
     }
 
     IEnumerator file3()
@@ -118,12 +125,16 @@ public class FixGame : MonoBehaviour
         Fixing3.SetActive(false);
         Fixed3.SetActive(true);
         ToPhase3 += 1;
+        CanDo3 = false;
 
     }
 
     public void File4()
     {
-        StartCoroutine(file4());
+        if (CanDo4 == true)
+        {
+            StartCoroutine(file4());
+        }
     }
 
     IEnumerator file4()
@@ -134,12 +145,15 @@ public class FixGame : MonoBehaviour
         Fixing4.SetActive(false);
         Fixed4.SetActive(true);
         ToWin += 1;
-
+        CanDo4 = false;
     }
 
     public void File5()
     {
-        StartCoroutine(file5());
+        if (CanDo5 == true)
+        {
+            StartCoroutine(file5());
+        }
     }
 
     IEnumerator file5()
@@ -150,12 +164,15 @@ public class FixGame : MonoBehaviour
         Fixing5.SetActive(false);
         Fixed5.SetActive(true);
         ToWin += 1;
-
+        CanDo5 = false;
     }
 
     public void File6()
     {
-        StartCoroutine(file6());
+        if (CanDo6 == true)
+        {
+            StartCoroutine(file6());
+        }
     }
 
     IEnumerator file6()
@@ -166,12 +183,16 @@ public class FixGame : MonoBehaviour
         Fixing6.SetActive(false);
         Fixed6.SetActive(true);
         ToWin += 1;
+        CanDo6 = false;
 
     }
 
     public void File7()
     {
-        StartCoroutine(file7());
+        if (CanDo7 == true)
+        {
+            StartCoroutine(file7());
+        }
     }
 
     IEnumerator file7()
@@ -182,6 +203,7 @@ public class FixGame : MonoBehaviour
         Fixing7.SetActive(false);
         Fixed7.SetActive(true);
         ToWin += 1;
+        CanDo7 = false;
 
     }
 }

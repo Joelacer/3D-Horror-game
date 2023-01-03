@@ -11,6 +11,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Office");
     }
 
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
 
 
     // Start is called before the first frame update
