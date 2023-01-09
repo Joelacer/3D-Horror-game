@@ -6810,7 +6810,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-2754
+  m_Name: pb_Mesh-2756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7634,7 +7634,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008021698}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.741394, y: 5.152467, z: -9.052481}
+  m_LocalPosition: {x: -3.44, y: 3.88, z: -1.59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19249,7 +19249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 791816755917569418}
   m_LocalRotation: {x: -0.7895858, y: 0.0063328445, z: 0.0011885464, w: 0.6136063}
-  m_LocalPosition: {x: -0.008107333, y: 0.020696152, z: 0.29788518}
+  m_LocalPosition: {x: -0.23, y: 0.020696152, z: 6.61}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22750,7 +22750,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5663368752587270347}
   m_LocalRotation: {x: -0, y: 0.7192309, z: -0, w: 0.6947711}
-  m_LocalPosition: {x: -15.313233, y: 0.03, z: 3.63}
+  m_LocalPosition: {x: -14.11, y: 0.03, z: 3.63}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -23608,6 +23608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5031509740538212977}
+  - component: {fileID: 5663368752587270348}
   m_Layer: 0
   m_Name: Suit
   m_TagString: Untagged
@@ -23615,6 +23616,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &5663368752587270348
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5663368752587270347}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3251ceb3dbe85a74e9cac295f38ce299, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &5693860916070432129
 Transform:
   m_ObjectHideFlags: 0
