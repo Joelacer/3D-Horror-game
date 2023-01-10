@@ -40,11 +40,11 @@ public class ComputerCamera : MonoBehaviour
                 onComputer = true;
                 StartCoroutine(toComputer(cameraPoint, 1));
                 StartCoroutine(LerpFunction(Quaternion.Euler(targetRotation), 1));
-                //I was very upset while doing this one so ignore the name
                 StartCoroutine(rotateShit());
+                //I was very upset while doing this one so ignore the name
 
             }
-            
+
         }
 
     }
