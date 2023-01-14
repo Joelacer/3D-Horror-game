@@ -80,6 +80,10 @@ GameObject:
   - component: {fileID: 2050875738}
   - component: {fileID: 2050875737}
   - component: {fileID: 2050875743}
+  - component: {fileID: 1677794893}
+  - component: {fileID: 1677794882}
+  - component: {fileID: 1677794881}
+  - component: {fileID: 1677794892}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Player
@@ -187,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onComputer: 0
-  cameraPoint: {x: 10.5, y: 1.7, z: 1.5}
+  cameraPoint: {x: 10.3, y: 1.3, z: 1.5}
   targetRotation: {x: 0, y: 0, z: 0}
   computerScreen: {fileID: 0}
 --- !u!65 &2050875738
@@ -201,8 +205,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.2584767, y: 3.1322207, z: 2.9609375}
-  m_Center: {x: 0.105118036, y: -0.5326307, z: 1.6913722}
+  m_Size: {x: 1.0055777, y: 4.1156363, z: 2.803333}
+  m_Center: {x: 0.017344952, y: -0.481004, z: 1.61257}
 --- !u!114 &2050875737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,6 +243,72 @@ MonoBehaviour:
   - Idiot
   textSpeed: 0.2
   dialogebox: {fileID: 0}
+--- !u!320 &1677794893
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530230898053719145}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: c6872249e549e9f408dd83684fa8f077, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 3567930649814071364, guid: c6872249e549e9f408dd83684fa8f077, type: 2}
+    value: {fileID: 1677794882}
+  m_ExposedReferences:
+    m_References: []
+--- !u!95 &1677794882
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530230898053719145}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6bbf0e2e4269e3b47ab21a4535c7012f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1677794881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530230898053719145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9556694dde137c24a964c3e1a51d9e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Step: {fileID: 0}
+--- !u!114 &1677794892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5530230898053719145}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25d91fd3ca6f5f74686c751d39faeece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 5530230898053719145}
+  CutSceneCAM: {fileID: 0}
 --- !u!1 &5530230898435015076
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,7 +338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5530230898435015076}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.622, z: 0}
+  m_LocalPosition: {x: 0, y: 1.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -350,7 +420,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5530230898435015076}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ba8e09246a4f843489067e5584055d69, type: 2}
   m_CullingMode: 0
@@ -369,7 +439,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5530230898435015076}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 204dbb8e33f51c243aae42bb1628fdbb, type: 3}
   m_Name: 
