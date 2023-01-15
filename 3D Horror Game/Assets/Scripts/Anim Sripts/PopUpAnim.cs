@@ -21,7 +21,7 @@ public class PopUpAnim : MonoBehaviour
 
     IEnumerator start()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(17f);
         animator.SetBool("NewTask", true);
         yield return new WaitForSeconds(1.20f);
         animator.SetBool("NewTask", false);

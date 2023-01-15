@@ -27,7 +27,9 @@ public class WalkINAnim : MonoBehaviour
         Player.SetActive(false);
         CutSceneCAM.SetActive(true);
         animator.SetBool("WalkIN", true);
-        yield return new WaitForSeconds(4.2f);
+        yield return new WaitForSeconds(7f);
+        Sound.PlaySound("bossStart");
+        yield return new WaitForSeconds(10f);
         Player.SetActive(true);
         CutSceneCAM.SetActive(false);
         animator.SetBool("WalkIN", false);
