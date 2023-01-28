@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam;
+    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -33,6 +33,7 @@ public class Sound : MonoBehaviour
         Lucas_Henry = Resources.Load<AudioClip>("Lucas_Henry");
         Lucas_Josh = Resources.Load<AudioClip>("Lucas_Josh");
         Lucas_Cam = Resources.Load<AudioClip>("Lucas_Cam");
+        Henry_Lucas = Resources.Load<AudioClip>("Henry_Lucas");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -128,6 +129,10 @@ public class Sound : MonoBehaviour
 
             case "Lucas_Cam":
                 audioSrc.PlayOneShot(Lucas_Cam);
+                break;
+
+            case "Henry_Lucas":
+                audioSrc.PlayOneShot(Henry_Lucas);
                 break;
 
         }

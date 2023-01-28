@@ -22,8 +22,8 @@ public class Day1Henry : MonoBehaviour
     IEnumerator TalkToHenry()
     {
         HaveTalked = true;
-        Sound.PlaySound("JoshDay1");
-        yield return new WaitForSeconds(8f);
+        Sound.PlaySound("Henry_Lucas");
+        yield return new WaitForSeconds(11f);
         Sound.PlaySound("Lucas_Henry");
     }
 }
