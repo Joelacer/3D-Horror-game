@@ -42,6 +42,11 @@ public class FixGame : MonoBehaviour
     bool CanDo6 = true;
     bool CanDo7 = true;
 
+    //bool SoundStartPlayed = false;
+    bool SoundPlayed2 = false;
+    bool SoundPlayed3 = false;
+    bool SoundPlayedDone = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,11 +59,21 @@ public class FixGame : MonoBehaviour
         if (ToPhase3 == 2)
         {
             Phase3.SetActive(true);
+            if (SoundPlayed3 == false)
+            {
+                SoundPlayed3 = true;
+                Sound.PlaySound("Lucas_FixGame_3");
+            }
         }
 
         if (ToWin == 4)
         {
             gameObject.SetActive(false);
+            if (SoundPlayedDone == false)
+            {
+                SoundPlayedDone = true;
+                Sound.PlaySound("Lucas_FixGame_Done");
+            }
         }
     }
 
@@ -84,6 +99,12 @@ public class FixGame : MonoBehaviour
         Fixed1.SetActive(true);
         Phase2.SetActive(true);
         CanDo1 = false;
+        if (SoundPlayed2 == false)
+        {
+            SoundPlayed2 = true;
+            Sound.PlaySound("Lucas_FixGame_2");
+            //Sound.PlaySound("Lucas_FixGame_Start");
+        }
 
     }
 

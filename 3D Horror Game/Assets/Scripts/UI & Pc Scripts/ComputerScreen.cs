@@ -17,6 +17,7 @@ public class ComputerScreen : MonoBehaviour
     public GameObject FixGame;
 
     bool Startcolorgame = false;
+    bool SoundStartPlayed = false;
     //bool StartSortgame = false;
 
 
@@ -54,7 +55,17 @@ public class ComputerScreen : MonoBehaviour
 
     public void OpenFixGame()
     {
-        FixGame.SetActive(true);
+       
+        FixGame.SetActive(true);  
+    }
+
+    public void FixgameVoiceline()
+    {
+       if (SoundStartPlayed == false)
+        {
+            SoundStartPlayed = true;
+            Sound.PlaySound("Lucas_FixGame_Start");
+        }
     }
 
     // Update is called once per frame
