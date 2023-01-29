@@ -7,6 +7,10 @@ public class Day1Emily : MonoBehaviour
     bool HaveTalked = false;
     public GameObject Player;
 
+    public bool GetHaveTalked()
+    {
+        return HaveTalked;
+    }
 
     void OnTriggerStay(Collider other)
     {

@@ -16,6 +16,10 @@ public class ComputerCamera : MonoBehaviour
     public GameObject computerScreen;
 
 
+    public bool GetonComputer()
+    {
+        return onComputer;
+    }
 
     void Awake()
     {

@@ -8,6 +8,14 @@ public class Day1Josh : MonoBehaviour
     public GameObject Player;
 
     
+
+    public bool GetHaveTalked()
+    {
+        return HaveTalked;
+    }
+
+   
+
     void OnTriggerStay(Collider other)
     {
         if (other.gameObject == Player)
@@ -25,5 +33,8 @@ public class Day1Josh : MonoBehaviour
         Sound.PlaySound("JoshDay1");
         yield return new WaitForSeconds(8f);
         Sound.PlaySound("Lucas_Josh");
+        
+        
+        
     }
 }

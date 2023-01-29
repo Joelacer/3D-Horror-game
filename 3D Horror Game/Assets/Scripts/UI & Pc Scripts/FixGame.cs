@@ -48,6 +48,12 @@ public class FixGame : MonoBehaviour
     bool SoundPlayedDone = false;
 
     // Start is called before the first frame update
+
+    public float GetTowin()
+    {
+        return ToWin;
+    }
+
     void Start()
     {
         
