@@ -9,6 +9,8 @@ public class Day1Task : MonoBehaviour
     float toleave = 0f;
     public GameObject LEAVE;
 
+    public GameObject Player;
+
     ComputerCamera computercamera;
     FixGame fixgame;
     Day1Cam day1cam;
@@ -36,7 +38,7 @@ public class Day1Task : MonoBehaviour
         MeetYourCoworkers.SetActive(false);
         LEAVE.SetActive(false);
 
-        computercamera = GameObject.Find("Player").GetComponent<ComputerCamera>();
+        computercamera = Player.GetComponent<ComputerCamera>();
         fixgame = FixGameOB.GetComponent<FixGame>();
         day1cam = GameObject.Find("Janitor_Cam").GetComponent<Day1Cam>();
         day1emily = GameObject.Find("Coworker_Emily").GetComponent<Day1Emily>();
@@ -81,6 +83,8 @@ public class Day1Task : MonoBehaviour
         {
             MeetYourCoworkers.SetActive(true);
         }
+
+       
     }
 
 

@@ -11,6 +11,12 @@ public class DoorAnimation : MonoBehaviour
     bool allsoundPlayed = true;
     float bugwait = 0.3f;
 
+    public bool GetifDoor()
+    {
+        return allsoundPlayed;
+    }
+        
+
     // Start is called before the first frame update
     void Start()
     {
