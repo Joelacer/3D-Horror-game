@@ -10,6 +10,11 @@ public class Cantopendoor : MonoBehaviour
 
     bool fix = true;
 
+    public bool Getfix()
+    {
+        return fix;
+    }
+
     Animator animator;
     DoorAnimation dooranimation;
 
@@ -25,27 +30,24 @@ public class Cantopendoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(dooranimation.GetifDoor() == false && fix == true && Input.GetKey(KeyCode.E))
+       if(dooranimation.GetifDoor() == false && fix == true)
         {
             StartCoroutine(start());
            
         }
-       else
-        {
-            StopAllCoroutines();
-        }
+       
     }
 
     
 
     IEnumerator start()
     {
-        //yield return new WaitForSeconds(17f);
-        fix = false;
+        //yield return new WaitForSeconds(0.5f);
+        //fix = false;
         animator.SetBool("NewTask", true);
         yield return new WaitForSeconds(1.20f);
         animator.SetBool("NewTask", false);
-        yield return new WaitForSeconds(2f);
-        fix = true;
+        //yield return new WaitForSeconds(2f);
+        //fix = true;
     }
 }

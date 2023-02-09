@@ -1849,7 +1849,7 @@ GameObject:
   - component: {fileID: 207092688}
   - component: {fileID: 207092692}
   m_Layer: 5
-  m_Name: Can'tOpendoor
+  m_Name: CantOpendoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7969,7 +7969,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24988
+  m_Name: pb_Mesh24992
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11204,7 +11204,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24558
+  m_Name: pb_Mesh24556
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12552,7 +12552,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24918
+  m_Name: pb_Mesh24920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12716,7 +12716,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24972
+  m_Name: pb_Mesh24976
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13996,7 +13996,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh24494
+  m_Name: pb_Mesh24492
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33011,11 +33011,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2893138762490545784}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545bddbcf59967449b9e7224f702c62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantopendoorOB: {fileID: 207092686}
 --- !u!65 &1533386539469785638
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39607,7 +39608,7 @@ GameObject:
   - component: {fileID: 1533386539469785626}
   - component: {fileID: 1533386539469785637}
   m_Layer: 0
-  m_Name: door
+  m_Name: doorB
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46651,11 +46652,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9150046779224789075}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 545bddbcf59967449b9e7224f702c62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cantopendoorOB: {fileID: 207092686}
 --- !u!95 &4871399047169662001
 Animator:
   serializedVersion: 4
@@ -58473,7 +58475,7 @@ GameObject:
   - component: {fileID: 4871399047169662001}
   - component: {fileID: 4871399047169661966}
   m_Layer: 0
-  m_Name: door
+  m_Name: doorJ
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

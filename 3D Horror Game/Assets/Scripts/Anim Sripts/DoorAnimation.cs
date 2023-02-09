@@ -6,6 +6,8 @@ public class DoorAnimation : MonoBehaviour
 {
     Animator animator;
 
+    Cantopendoor cantopendoor;
+
     bool SoundPlayed = false;
     bool ClosePlayed = false;
     bool allsoundPlayed = true;
@@ -15,12 +17,15 @@ public class DoorAnimation : MonoBehaviour
     {
         return allsoundPlayed;
     }
+    public GameObject cantopendoorOB;
         
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
+       
+        cantopendoor = cantopendoorOB.GetComponent<Cantopendoor>();
     }
 
     // Update is called once per frame
@@ -48,25 +53,36 @@ public class DoorAnimation : MonoBehaviour
 
     public IEnumerator StartCooldown()
     {
-        allsoundPlayed = false;
-        animator.SetBool("isOpening", true);
-
-        if (SoundPlayed == false)
+        if(cantopendoor.Getfix() == false)
         {
-            Sound.PlaySound("DoorOpen");
-            SoundPlayed = true;
-        }
-        
-        yield return new WaitForSeconds(5);
-        animator.SetBool("isOpening", false);
+            allsoundPlayed = false;
+            animator.SetBool("isOpening", true);
 
-        if (ClosePlayed == false)
-        {
-            ClosePlayed = true;
-            Sound.PlaySound("DoorClose");
-            
+            if (SoundPlayed == false)
+            {
+                Sound.PlaySound("DoorOpen");
+                SoundPlayed = true;
+            }
+
+            yield return new WaitForSeconds(5);
+            animator.SetBool("isOpening", false);
+
+            if (ClosePlayed == false)
+            {
+                ClosePlayed = true;
+                Sound.PlaySound("DoorClose");
+
+            }
+            yield return new WaitForSeconds(bugwait);
+            allsoundPlayed = true;
         }
-        yield return new WaitForSeconds(bugwait);
-        allsoundPlayed = true;
+        else if (cantopendoor.Getfix() == true)
+        {
+            allsoundPlayed = false;
+            yield return new WaitForSeconds(1.2f);
+            allsoundPlayed = true;
+
+        }
     }
+    
 }
