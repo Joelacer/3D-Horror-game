@@ -7,9 +7,16 @@ public class Day1Henry : MonoBehaviour
     bool HaveTalked = false;
     public GameObject Player;
 
+    bool Look = false;
+
     public bool GetHaveTalked()
     {
         return HaveTalked;
+    }
+
+    public bool GetLook()
+    {
+        return Look;
     }
 
     void OnTriggerStay(Collider other)
@@ -25,9 +32,11 @@ public class Day1Henry : MonoBehaviour
 
     IEnumerator TalkToHenry()
     {
+        Look = true;
         HaveTalked = true;
         Sound.PlaySound("Henry_Lucas");
         yield return new WaitForSeconds(11f);
         Sound.PlaySound("Lucas_Henry");
+        Look = false;
     }
 }
