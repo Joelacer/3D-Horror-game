@@ -8,7 +8,15 @@ public class Day1Josh : MonoBehaviour
     public GameObject Player;
 
     bool Look = false;
-    
+
+    Day1Task day1task;
+    public GameObject ShowTask;
+
+    void Start()
+    {
+        day1task = ShowTask.GetComponent<Day1Task>();
+    }
+
 
     public bool GetHaveTalked()
     {
@@ -26,7 +34,7 @@ public class Day1Josh : MonoBehaviour
     {
         if (other.gameObject == Player)
         {
-            if(Input.GetKey(KeyCode.E) && HaveTalked == false) 
+            if(Input.GetKey(KeyCode.E) && HaveTalked == false && day1task.GetdoneFixFiles() == true) 
             {
                 StartCoroutine(TalkToJosh());
             }

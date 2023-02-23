@@ -30475,6 +30475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 5530230897974436391}
+  ShowTask: {fileID: 1459920735682579710}
 --- !u!1 &855222659965497661
 GameObject:
   m_ObjectHideFlags: 0
@@ -30705,6 +30706,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 5530230897974436391}
+  ShowTask: {fileID: 1459920735682579710}
 --- !u!1 &919132148564411408
 GameObject:
   m_ObjectHideFlags: 0
@@ -40798,6 +40800,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FixGameOB: {fileID: 402943535}
+  toleave: 0
+  leave1: 0
+  leave2: 0
+  leave3: 0
+  to1: 0
+  to2: 0
+  to3: 0
   LEAVE: {fileID: 700387232}
   Player: {fileID: 5530230897974436391}
   DoneGoToYourPC: {fileID: 344756428}
@@ -48878,6 +48887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 5530230897974436391}
+  ShowTask: {fileID: 1459920735682579710}
 --- !u!33 &5697704862195171568
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -56210,6 +56220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 5530230897974436391}
+  ShowTask: {fileID: 1459920735682579710}
 --- !u!1 &7920112175577380074
 GameObject:
   m_ObjectHideFlags: 0

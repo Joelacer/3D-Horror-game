@@ -6,10 +6,21 @@ public class Day1Task : MonoBehaviour
 {
     public GameObject FixGameOB;
 
-    float toleave = 0f;
+    public float toleave = 0f;
+    public bool leave1 = false;
+    public bool leave2 = false;
+    public bool leave3 = false;
+    public bool to1 = false;
+    public bool to2 = false;
+    public bool to3 = false;
     public GameObject LEAVE;
 
     public GameObject Player;
+
+    public float GetToLeave()
+    {
+        return toleave;
+    }
 
     ComputerCamera computercamera;
     FixGame fixgame;
@@ -27,6 +38,11 @@ public class Day1Task : MonoBehaviour
 
     bool doneGoToPC = false;
     bool doneFixFiles = false;
+
+    public bool GetdoneFixFiles()
+    {
+        return doneFixFiles;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -52,21 +68,24 @@ public class Day1Task : MonoBehaviour
         if (computercamera.GetonComputer() == true)
         {
             DoneGoToYourPC.SetActive(true);
-            toleave = +1;
+            StartCoroutine(plustoleave());
             doneGoToPC = true;
+            leave1 = true;
         }
 
         if (fixgame.GetTowin() == 4)
         {
             DoneFixfiles.SetActive(true);
-            toleave = +1;
+            StartCoroutine(plustoleave());
             doneFixFiles = true;
+            leave2 = true;
         }
 
         if(day1cam.GetHaveTalked() == true && day1emily.GetHaveTalked() == true && day1henry.GetHaveTalked() == true && day1josh.GetHaveTalked() == true)
         {
             DoneMeetYourCoworkers.SetActive(true);
-            toleave = +1;
+            StartCoroutine(plustoleave());
+            leave3 = true;
         }
 
         if (toleave == 3)
@@ -85,6 +104,28 @@ public class Day1Task : MonoBehaviour
         }
 
        
+    }
+
+    IEnumerator plustoleave()
+    {
+        if (leave1 == true && to1 == false)
+        {
+            yield return new WaitForSeconds(1);
+            toleave =+ 1;
+            to1 = true;
+        }
+        if (leave2 == true && to2 == false)
+        {
+            yield return new WaitForSeconds(1);
+            toleave =+ 2;
+            to2 = true;
+        }
+        if (leave3 == true && to3 == false)
+        {
+            yield return new WaitForSeconds(1);
+            toleave =+ 3;
+            to3 = true;
+        }
     }
 
 
