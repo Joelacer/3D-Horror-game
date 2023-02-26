@@ -32,6 +32,12 @@ public class SelectionManager : MonoBehaviour
             
         }
 
+        if (other.tag == "person")
+        {
+            EShow.SetActive(true);
+
+        }
+
 
         if (other.tag == "Door")
         {
@@ -83,6 +89,11 @@ public class SelectionManager : MonoBehaviour
         if (other.tag == "BroomGet" && mopping.GetMop() == true)
         {
             QShow.SetActive(false);
+        }
+
+        if (other.tag == "person")
+        {
+            EShow.SetActive(false);
         }
     }
 
