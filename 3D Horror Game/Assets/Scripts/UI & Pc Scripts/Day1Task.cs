@@ -5,6 +5,9 @@ using UnityEngine;
 public class Day1Task : MonoBehaviour
 {
     public GameObject FixGameOB;
+    public GameObject messageAppOB;
+
+    public GameObject MonsterTab;
 
     public float toleave = 0f;
     public bool leave1 = false;
@@ -28,6 +31,7 @@ public class Day1Task : MonoBehaviour
     Day1Emily day1emily;
     Day1Henry day1henry;
     Day1Josh day1josh;
+    MessageApp messageapp;
 
 
     public GameObject DoneGoToYourPC;
@@ -35,9 +39,12 @@ public class Day1Task : MonoBehaviour
     public GameObject Fixfiles;
     public GameObject DoneMeetYourCoworkers;
     public GameObject MeetYourCoworkers;
+    public GameObject DoneInvestigatenoice;
+    public GameObject Investigatenoice;
 
     bool doneGoToPC = false;
     bool doneFixFiles = false;
+    bool doneMeet = false;
 
     public bool GetdoneFixFiles()
     {
@@ -52,6 +59,8 @@ public class Day1Task : MonoBehaviour
         DoneMeetYourCoworkers.SetActive(false);
         Fixfiles.SetActive(false);
         MeetYourCoworkers.SetActive(false);
+        DoneInvestigatenoice.SetActive(false);
+        Investigatenoice.SetActive(false);
         LEAVE.SetActive(false);
 
         computercamera = Player.GetComponent<ComputerCamera>();
@@ -60,6 +69,7 @@ public class Day1Task : MonoBehaviour
         day1emily = GameObject.Find("Coworker_Emily").GetComponent<Day1Emily>();
         day1henry = GameObject.Find("Coworker_Henry").GetComponent<Day1Henry>();
         day1josh = GameObject.Find("Coworker_Josh").GetComponent<Day1Josh>();
+        messageapp = messageAppOB.GetComponent<MessageApp>();
     }
 
     // Update is called once per frame
@@ -84,8 +94,9 @@ public class Day1Task : MonoBehaviour
         if(day1cam.GetHaveTalked() == true && day1emily.GetHaveTalked() == true && day1henry.GetHaveTalked() == true && day1josh.GetHaveTalked() == true)
         {
             DoneMeetYourCoworkers.SetActive(true);
-            StartCoroutine(plustoleave());
-            leave3 = true;
+            //StartCoroutine(plustoleave());
+            //leave3 = true;
+            doneMeet = true;
         }
 
         if (toleave == 3)
@@ -102,6 +113,21 @@ public class Day1Task : MonoBehaviour
         {
             MeetYourCoworkers.SetActive(true);
         }
+
+        if(doneMeet == true)
+        {
+            //Investigatenoice.SetActive(true);
+            StartCoroutine(noicewait());
+        }
+
+        if(messageapp.GetMonsterTab() == true)
+        {
+            leave3 = true;
+            DoneInvestigatenoice.SetActive(true);
+            StartCoroutine(plustoleave());
+        }
+
+
 
        
     }
@@ -128,6 +154,15 @@ public class Day1Task : MonoBehaviour
         }
     }
 
+    IEnumerator noicewait()
+    {
+        yield return new WaitForSeconds(15f);
+        Investigatenoice.SetActive(true);
+        MonsterTab.SetActive(true);
+        
+    }
 
-   
+
+
+
 }

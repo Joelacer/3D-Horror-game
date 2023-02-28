@@ -15,6 +15,7 @@ public class ComputerScreen : MonoBehaviour
     public GameObject ColorGame;
     public GameObject SortGame;
     public GameObject FixGame;
+    public GameObject MessageApp;
 
     bool Startcolorgame = false;
     bool SoundStartPlayed = false;
@@ -29,6 +30,9 @@ public class ComputerScreen : MonoBehaviour
         playerCamera = GameObject.Find("Main Camera");
         playerMove = GameObject.Find("Player").GetComponent<PlayerMove>();
         playerOnComputer = GameObject.Find("Player").GetComponent<ComputerCamera>();
+        MessageApp.SetActive(false);
+        ColorGame.SetActive(false);
+        FixGame.SetActive(false);
     }
 
     public void ExitComputer()
@@ -57,6 +61,12 @@ public class ComputerScreen : MonoBehaviour
     {
        
         FixGame.SetActive(true);  
+    }
+
+    public void OpenMessageAPP()
+    {
+
+        MessageApp.SetActive(true);
     }
 
     public void FixgameVoiceline()
