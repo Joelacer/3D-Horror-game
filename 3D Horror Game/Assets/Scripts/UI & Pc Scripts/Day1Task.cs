@@ -46,6 +46,8 @@ public class Day1Task : MonoBehaviour
     bool doneFixFiles = false;
     bool doneMeet = false;
 
+    bool msgsoundsplayed = false;
+
     public bool GetdoneFixFiles()
     {
         return doneFixFiles;
@@ -156,7 +158,15 @@ public class Day1Task : MonoBehaviour
 
     IEnumerator noicewait()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(20f);
+        if (msgsoundsplayed == false)
+        {
+            msgsoundsplayed = true;
+            Sound.PlaySound("MSG_Sound");
+            yield return new WaitForSeconds(1f);
+            Sound.PlaySound("Lucas_Msg");
+        }
+
         Investigatenoice.SetActive(true);
         MonsterTab.SetActive(true);
         

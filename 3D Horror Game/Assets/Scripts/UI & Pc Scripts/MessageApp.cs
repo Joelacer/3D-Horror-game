@@ -13,6 +13,8 @@ public class MessageApp : MonoBehaviour
     public GameObject NewMessageJared;
     public GameObject NewMessageMonster;
 
+    bool LucasMSGReaction = false;
+
     
 
     public bool GetMonsterTab()
@@ -69,7 +71,14 @@ public class MessageApp : MonoBehaviour
     {
         MonsterTab = true;
         NewMessageMonster.SetActive(false);
+        if (LucasMSGReaction == false)
+        {
+            Sound.PlaySound("Lucas_Msg_Reaction");
+            LucasMSGReaction = true;
+        }
 
         JaredTab = false;
     }
+
+    
 }
