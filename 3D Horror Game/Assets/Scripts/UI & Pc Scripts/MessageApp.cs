@@ -74,6 +74,7 @@ public class MessageApp : MonoBehaviour
         if (LucasMSGReaction == false)
         {
             Sound.PlaySound("Lucas_Msg_Reaction");
+            Sound.PlaySound("SpookSound");
             LucasMSGReaction = true;
         }
 

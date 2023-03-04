@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction;
+    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction, newsPaperSound, SpookSound;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -38,6 +38,9 @@ public class Sound : MonoBehaviour
         MSG_Sound = Resources.Load<AudioClip>("MSG_Sound");
         Lucas_Msg = Resources.Load<AudioClip>("Lucas_Msg");
         Lucas_Msg_Reaction = Resources.Load<AudioClip>("Lucas_Msg_Reaction");
+
+        newsPaperSound = Resources.Load<AudioClip>("newsPaperSound");
+        SpookSound = Resources.Load<AudioClip>("SpookSound");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -151,6 +154,15 @@ public class Sound : MonoBehaviour
 
             case "Lucas_Msg_Reaction":
                 audioSrc.PlayOneShot(Lucas_Msg_Reaction);
+                break;
+
+
+            case "newsPaperSound":
+                audioSrc.PlayOneShot(newsPaperSound);
+                break;
+
+            case "SpookSound":
+                audioSrc.PlayOneShot(SpookSound);
                 break;
 
         }
