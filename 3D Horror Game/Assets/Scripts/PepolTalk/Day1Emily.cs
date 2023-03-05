@@ -39,11 +39,13 @@ public class Day1Emily : MonoBehaviour
 
     IEnumerator TalkToEmily()
     {
+        transform.rotation = Quaternion.Euler(0, 230, 0);
         Look = true;
         HaveTalked = true;
       
         yield return new WaitForSeconds(2f);
         Sound.PlaySound("Lucas_Emily");
         Look = false;
+        transform.rotation = Quaternion.Euler(0, 65, 0);
     }
 }

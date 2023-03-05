@@ -45,12 +45,14 @@ public class Day1Josh : MonoBehaviour
     {
         Look = true;
         HaveTalked = true;
+        transform.rotation = Quaternion.Euler(0, 110, 0);
         Sound.PlaySound("JoshDay1");
         yield return new WaitForSeconds(8f);
         Sound.PlaySound("Lucas_Josh");
         Look = false;
-        
-        
-        
+        transform.rotation = Quaternion.Euler(0, 200, 0);
+
+
+
     }
 }

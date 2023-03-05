@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LookAtCam : MonoBehaviour
+public class LookAtHenry : MonoBehaviour
 {
     public Transform Target;
 
@@ -15,35 +15,35 @@ public class LookAtCam : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        day1cam = GameObject.Find("Janitor_Cam").GetComponent<Day1Cam>();
+        //day1cam = GameObject.Find("Janitor_Cam").GetComponent<Day1Cam>();
         //day1emily = GameObject.Find("Coworker_Emily").GetComponent<Day1Emily>();
-        //day1henry = GameObject.Find("Coworker_Henry").GetComponent<Day1Henry>();
+        day1henry = GameObject.Find("Coworker_Henry").GetComponent<Day1Henry>();
         //day1josh = GameObject.Find("Coworker_Josh").GetComponent<Day1Josh>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(day1cam.GetLook() == true)
-        {
-            transform.LookAt(Target);
-        }
+       // if (day1cam.GetLook() == true)
+       // {
+       //     transform.LookAt(Target);
+       // }
 
         //if (day1emily.GetLook() == true)
         //{
         //    transform.LookAt(Target);
         //}
 
-        //if (day1henry.GetLook() == true)
-        //{
-            
-        //    transform.LookAt(Target);
-           
-        //}
+        if (day1henry.GetLook() == true)
+        {
 
-       // if (day1josh.GetLook() == true)
-       // {
-       //     transform.LookAt(Target);
+            transform.LookAt(Target);
+
+        }
+
+        // if (day1josh.GetLook() == true)
+        // {
+        //     transform.LookAt(Target);
         //}
     }
 }
