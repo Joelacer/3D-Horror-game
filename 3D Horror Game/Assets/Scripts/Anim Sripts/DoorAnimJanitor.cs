@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorAnimation : MonoBehaviour
+public class DoorAnimJanitor : MonoBehaviour
 {
     Animator animator;
 
-    Cantopendoor cantopendoor;
+    bool Day2Task = false;
+    public bool Getday2task()
+    {
+        return Day2Task;
+    }
+
     Day2Task day2task;
     public GameObject ShowTask;
 
@@ -21,21 +26,21 @@ public class DoorAnimation : MonoBehaviour
         return cantdoor;
     }
     public GameObject cantopendoorOB;
-        
+
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>();
-       
-        cantopendoor = cantopendoorOB.GetComponent<Cantopendoor>();
+
+        
         day2task = ShowTask.GetComponent<Day2Task>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -46,7 +51,7 @@ public class DoorAnimation : MonoBehaviour
             {
                 StartCoroutine(StartCooldown());
             }
-            
+
             if (allsoundPlayed == true)
             {
                 SoundPlayed = false;
@@ -57,8 +62,9 @@ public class DoorAnimation : MonoBehaviour
 
     public IEnumerator StartCooldown()
     {
-        if(cantopendoor.Getfix() == false)
+        if (day2task.GetjanitorDoor() == true)
         {
+            Day2Task = true;
             allsoundPlayed = false;
             animator.SetBool("isOpening", true);
 
@@ -80,7 +86,8 @@ public class DoorAnimation : MonoBehaviour
             yield return new WaitForSeconds(bugwait);
             allsoundPlayed = true;
         }
-        else if (cantopendoor.Getfix() == true)
+
+        else if (day2task.GetjanitorDoor() == false)
         {
             cantdoor = false;
             yield return new WaitForSeconds(1.2f);
@@ -88,8 +95,10 @@ public class DoorAnimation : MonoBehaviour
 
         }
 
-       
-        
+
+
+
+
     }
-    
+
 }

@@ -6,7 +6,7 @@ public class TaskScript : MonoBehaviour
 {
     public GameObject TrashCan;
 
-    
+    // OLD USE DAY2Task - DAY3Task Scripts
 
     Mopping mopping;
     TrashTask trashtask;
