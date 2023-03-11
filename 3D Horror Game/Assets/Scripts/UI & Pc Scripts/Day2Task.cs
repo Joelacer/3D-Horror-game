@@ -18,6 +18,10 @@ public class Day2Task : MonoBehaviour
     public GameObject trashTaskOB;
     DoorAnimJanitor dooranimjanitor;
     public GameObject JanitorDoorOB;
+    CleanText cleantext;
+    public GameObject TextOB;
+    Mopping mopping;
+    public GameObject BroomOB;
 
     public GameObject CheckMessages;
     public GameObject DoneCheckMessages;
@@ -25,6 +29,12 @@ public class Day2Task : MonoBehaviour
     public GameObject DoneCleanTrash;
     public GameObject GoGetBroom;
     public GameObject DoneGoGetBroom;
+    public GameObject CleanWriting;
+    public GameObject DoneCleamWriting;
+    public GameObject Broom;
+    public GameObject DoneBroom;
+    public GameObject GoToPC;
+    public GameObject DoneGotoPC;
 
     public bool GetDay2()
     {
@@ -39,12 +49,21 @@ public class Day2Task : MonoBehaviour
         messageapp = messageAppOB.GetComponent<MessageApp>();
         trashtask = trashTaskOB.GetComponent<TrashTask>();
         dooranimjanitor = JanitorDoorOB.GetComponent<DoorAnimJanitor>();
+        cleantext = TextOB.GetComponent<CleanText>();
+        mopping = BroomOB.GetComponent<Mopping>();
 
+        
         DoneCheckMessages.SetActive(false);
         CleanTrash.SetActive(false);
         DoneCleanTrash.SetActive(false);
         GoGetBroom.SetActive(false);
         DoneGoGetBroom.SetActive(false);
+        CleanWriting.SetActive(false);
+        DoneCleamWriting.SetActive(false);
+        Broom.SetActive(false);
+        DoneBroom.SetActive(false);
+        GoToPC.SetActive(false);
+        DoneGotoPC.SetActive(false);
     }
 
     // Update is called once per frame
@@ -78,6 +97,27 @@ public class Day2Task : MonoBehaviour
             DoneCleanTrash.SetActive(false);
             GoGetBroom.SetActive(false);
             DoneGoGetBroom.SetActive(false);
+            CheckMessages.SetActive(false);
+
+            CleanWriting.SetActive(true);
+        }
+
+        //Clean Writing TASK4
+
+        if(cleantext.GetCleaned() == true)
+        {
+            DoneCleamWriting.SetActive(true);
+
+            Broom.SetActive(true);
+        }
+
+        //Broom TASK5
+
+        if(mopping.GetCounter() == 4)
+        {
+            DoneBroom.SetActive(true);
+
+            GoToPC.SetActive(true);
         }
 
 
