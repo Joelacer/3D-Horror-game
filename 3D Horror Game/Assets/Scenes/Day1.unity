@@ -43173,7 +43173,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27392
+  m_Name: pb_Mesh44302
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -43714,6 +43714,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextJared: {fileID: 1066618611}
   TextMonster: {fileID: 1199773184}
+  TextJaredCam: {fileID: 1066618611}
+  ShowTask: {fileID: 1459920735682579710}
   NewMessageJared: {fileID: 1553689477}
   NewMessageMonster: {fileID: 852573877}
 --- !u!1 &1684026301
@@ -65978,6 +65980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545bddbcf59967449b9e7224f702c62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTask: {fileID: 0}
   cantopendoorOB: {fileID: 207092686}
 --- !u!65 &1533386539469785638
 BoxCollider:
@@ -72393,6 +72396,8 @@ GameObject:
   - component: {fileID: 2733341133605414902}
   - component: {fileID: 2733341133605414903}
   - component: {fileID: 2733341133605414900}
+  - component: {fileID: 2733341133605414905}
+  - component: {fileID: 2733341133605414904}
   m_Layer: 0
   m_Name: ExitDoor
   m_TagString: Untagged
@@ -72450,6 +72455,34 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2733341133605414901}
   m_Mesh: {fileID: 1652962596}
+--- !u!114 &2733341133605414904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2733341133605414901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b1164102b74b04419b6aafad3cc231d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Day1TaskOB: {fileID: 1459920735682579710}
+  fadeout: {fileID: 1220152771}
+  black: {fileID: 1706740055}
+--- !u!65 &2733341133605414905
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2733341133605414901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.0000024, y: 3.9893625, z: 3}
+  m_Center: {x: -3.0000963, y: 1.9946803, z: 1.5}
 --- !u!64 &2733341133675524898
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -80071,6 +80104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 545bddbcf59967449b9e7224f702c62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ShowTask: {fileID: 0}
   cantopendoorOB: {fileID: 207092686}
 --- !u!95 &4871399047169662001
 Animator:

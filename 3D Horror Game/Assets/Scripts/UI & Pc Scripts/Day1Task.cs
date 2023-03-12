@@ -134,6 +134,11 @@ public class Day1Task : MonoBehaviour
        
     }
 
+    public bool GetLeave3()
+    {
+        return leave3;
+    }
+
     IEnumerator plustoleave()
     {
         if (leave1 == true && to1 == false)
