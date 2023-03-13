@@ -6,6 +6,15 @@ public class Day2Task : MonoBehaviour
 {
     bool Day2 = false;
 
+    bool Task6 = false;
+    bool JoshSpook = false;
+    public GameObject JoshScare;
+
+    public bool GetJoshSpook()
+    {
+        return JoshSpook;
+    }
+
     bool JanitorDoor = false;
     public bool GetjanitorDoor()
     {
@@ -22,6 +31,9 @@ public class Day2Task : MonoBehaviour
     public GameObject TextOB;
     Mopping mopping;
     public GameObject BroomOB;
+    ComputerCamera computercamera;
+    JoshJumpscare joshjumpscare;
+    public GameObject JoshscareOB;
 
     public GameObject CheckMessages;
     public GameObject DoneCheckMessages;
@@ -45,14 +57,17 @@ public class Day2Task : MonoBehaviour
     void Start()
     {
         Day2 = true;
+        JoshScare.SetActive(false);
 
         messageapp = messageAppOB.GetComponent<MessageApp>();
         trashtask = trashTaskOB.GetComponent<TrashTask>();
         dooranimjanitor = JanitorDoorOB.GetComponent<DoorAnimJanitor>();
         cleantext = TextOB.GetComponent<CleanText>();
         mopping = BroomOB.GetComponent<Mopping>();
+        computercamera = BroomOB.GetComponent<ComputerCamera>();
+        joshjumpscare = JoshscareOB.GetComponent<JoshJumpscare>();
 
-        
+
         DoneCheckMessages.SetActive(false);
         CleanTrash.SetActive(false);
         DoneCleanTrash.SetActive(false);
@@ -118,6 +133,16 @@ public class Day2Task : MonoBehaviour
             DoneBroom.SetActive(true);
 
             GoToPC.SetActive(true);
+            Task6 = true;
+        }
+
+        //Go To PC TASK6
+
+        if(computercamera.GetonComputer() == true && Day2 == true && Task6 == true)
+        {
+            JoshScare.SetActive(true);
+            JoshSpook = true;
+            DoneGotoPC.SetActive(true);
         }
 
 
