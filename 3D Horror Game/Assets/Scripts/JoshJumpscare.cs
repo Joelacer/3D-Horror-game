@@ -8,9 +8,12 @@ public class JoshJumpscare : MonoBehaviour
     public GameObject Day2TaskOB;
     public GameObject Josh;
     public GameObject Camera;
+    public GameObject ComputerScreen;
+    public GameObject CanvasEQ;
 
     bool JoshvoicelinePlayed = false;
     bool SpookPlayed = false;
+    bool playoneTime = false;
 
     bool Done = false;
 
@@ -32,31 +35,43 @@ public class JoshJumpscare : MonoBehaviour
         {
             StartCoroutine(JoshTalk());
         }
+        else if (Done == true)
+        {
+            Josh.SetActive(false);
+        }
     }
 
     IEnumerator JoshTalk()
     {
-        Josh.SetActive(true);
-        Camera.SetActive(true);
-
-        if(SpookPlayed == false)
+        if (playoneTime == false)
         {
-            SpookPlayed = true;
-            Sound.PlaySound("SpookSound");
+            playoneTime = true;
+            Josh.SetActive(true);
+            Camera.SetActive(true);
+            ComputerScreen.SetActive(false);
+            CanvasEQ.SetActive(false);
+
+            if (SpookPlayed == false)
+            {
+                SpookPlayed = true;
+                Sound.PlaySound("SpookSound");
+            }
+
+            yield return new WaitForSeconds(1f);
+
+            if (JoshvoicelinePlayed == false)
+            {
+                JoshvoicelinePlayed = true;
+                Sound.PlaySound("JoshDay2");
+            }
+
+            yield return new WaitForSeconds(13f);
+            Josh.SetActive(false);
+            Camera.SetActive(false);
+            Done = true;
+            ComputerScreen.SetActive(true);
+            CanvasEQ.SetActive(true);
         }
-
-        yield return new WaitForSeconds(1f);
-
-        if ( JoshvoicelinePlayed == false)
-        {
-            JoshvoicelinePlayed = true;
-            Sound.PlaySound("JoshDay2");
-        }
-
-        yield return new WaitForSeconds(13f);
-        Josh.SetActive(false);
-        Camera.SetActive(false);
-        Done = true;
 
 
     }

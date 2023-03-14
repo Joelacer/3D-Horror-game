@@ -47,6 +47,9 @@ public class Day2Task : MonoBehaviour
     public GameObject DoneBroom;
     public GameObject GoToPC;
     public GameObject DoneGotoPC;
+    public GameObject Firewall;
+    public GameObject DoneFirewall;
+    public GameObject Leave;
 
     public bool GetDay2()
     {
@@ -79,6 +82,9 @@ public class Day2Task : MonoBehaviour
         DoneBroom.SetActive(false);
         GoToPC.SetActive(false);
         DoneGotoPC.SetActive(false);
+        Firewall.SetActive(false);
+        DoneFirewall.SetActive(false);
+        Leave.SetActive(false);
     }
 
     // Update is called once per frame
@@ -143,7 +149,25 @@ public class Day2Task : MonoBehaviour
             JoshScare.SetActive(true);
             JoshSpook = true;
             DoneGotoPC.SetActive(true);
+
+            DoneCheckMessages.SetActive(false);
+            CleanTrash.SetActive(false);
+            DoneCleanTrash.SetActive(false);
+            GoGetBroom.SetActive(false);
+            DoneGoGetBroom.SetActive(false);
+            CleanWriting.SetActive(false);
+            DoneCleamWriting.SetActive(false);
+            Broom.SetActive(false);
+            DoneBroom.SetActive(false);
+            GoToPC.SetActive(false);
+            DoneGotoPC.SetActive(false);
+
+            Firewall.SetActive(true);
         }
+
+        //Help with firewall TASK7
+
+
 
 
     }
