@@ -7,18 +7,26 @@ public class MessageApp : MonoBehaviour
     public GameObject TextJared;
     public GameObject TextMonster;
     public GameObject TextJaredCam;
+    public GameObject TextJosh;
 
     bool JaredTab = false;
     bool MonsterTab = false;
+    bool JaredCamTab = false;
+    bool JoshTab = false;
 
     public GameObject ShowTask;
+    public GameObject JoshjumpscareOB;
 
     public GameObject NewMessageJared;
     public GameObject NewMessageMonster;
+    public GameObject NewMessageJosh;
+
+    public GameObject JoshMessage;
 
     bool LucasMSGReaction = false;
 
     Day2Task day2task;
+    JoshJumpscare joshjumpscare;
 
     
 
@@ -37,9 +45,12 @@ public class MessageApp : MonoBehaviour
     {
         TextJared.SetActive(false);
         TextMonster.SetActive(false);
-        TextJaredCam.SetActive(false);
+        //TextJaredCam.SetActive(false);
+        TextJosh.SetActive(false);
+        JoshMessage.SetActive(false);
 
         day2task = ShowTask.GetComponent<Day2Task>();
+        joshjumpscare = JoshjumpscareOB.GetComponent<JoshJumpscare>();
     }
 
     // Update is called once per frame
@@ -80,6 +91,22 @@ public class MessageApp : MonoBehaviour
             TextJared.SetActive(false);
         }
 
+        if (JoshTab == true && day2task.GetDay2() == true)
+        {
+            TextJosh.SetActive(true);
+            
+        }
+        else
+        {
+            TextJosh.SetActive(false);
+            
+        }
+
+        if (joshjumpscare.GetDone() == true)
+        {
+            JoshMessage.SetActive(true);
+        }
+
 
     }
 
@@ -108,6 +135,14 @@ public class MessageApp : MonoBehaviour
             Sound.PlaySound("SpookSound");
             LucasMSGReaction = true;
         }
+
+        JaredTab = false;
+    }
+
+    public void joshtab()
+    {
+        JoshTab = true;
+        NewMessageJosh.SetActive(false);
 
         JaredTab = false;
     }

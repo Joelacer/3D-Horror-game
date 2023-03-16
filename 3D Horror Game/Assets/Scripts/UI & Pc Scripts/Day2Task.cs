@@ -34,6 +34,8 @@ public class Day2Task : MonoBehaviour
     ComputerCamera computercamera;
     JoshJumpscare joshjumpscare;
     public GameObject JoshscareOB;
+    ColorGame colorgame;
+    public GameObject ComputerScreenOB;
 
     public GameObject CheckMessages;
     public GameObject DoneCheckMessages;
@@ -50,6 +52,8 @@ public class Day2Task : MonoBehaviour
     public GameObject Firewall;
     public GameObject DoneFirewall;
     public GameObject Leave;
+
+    public GameObject OneTwoTasks;
 
     public bool GetDay2()
     {
@@ -69,6 +73,7 @@ public class Day2Task : MonoBehaviour
         mopping = BroomOB.GetComponent<Mopping>();
         computercamera = BroomOB.GetComponent<ComputerCamera>();
         joshjumpscare = JoshscareOB.GetComponent<JoshJumpscare>();
+        colorgame = ComputerScreenOB.GetComponent<ColorGame>();
 
 
         DoneCheckMessages.SetActive(false);
@@ -146,10 +151,11 @@ public class Day2Task : MonoBehaviour
 
         if(computercamera.GetonComputer() == true && Day2 == true && Task6 == true)
         {
-            JoshScare.SetActive(true);
+            //JoshScare.SetActive(true);
             JoshSpook = true;
             DoneGotoPC.SetActive(true);
 
+            CheckMessages.SetActive(false);
             DoneCheckMessages.SetActive(false);
             CleanTrash.SetActive(false);
             DoneCleanTrash.SetActive(false);
@@ -161,13 +167,25 @@ public class Day2Task : MonoBehaviour
             DoneBroom.SetActive(false);
             GoToPC.SetActive(false);
             DoneGotoPC.SetActive(false);
+            OneTwoTasks.SetActive(false);
 
             Firewall.SetActive(true);
         }
 
+        if (joshjumpscare.GetDone() == true)
+        {
+            JoshSpook = false;
+            Task6 = false;
+        }
+
         //Help with firewall TASK7
 
+        if(colorgame.GetDone() == true)
+        {
+            DoneFirewall.SetActive(true);
 
+            Leave.SetActive(true);
+        }
 
 
     }

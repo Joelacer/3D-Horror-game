@@ -21,6 +21,13 @@ public class ColorGame : MonoBehaviour
     public  float yellow = 0;
     public float green = 0;
 
+    bool ColorgameDone = false;
+
+    public bool GetDone()
+    {
+        return ColorgameDone;
+    }
+
     
     public bool GetGame1()
     {
@@ -240,6 +247,7 @@ public class ColorGame : MonoBehaviour
             {
                 red += 1;
                 Sound.PlaySound("Button");
+                ColorgameDone = true;
             }
             else
             {
