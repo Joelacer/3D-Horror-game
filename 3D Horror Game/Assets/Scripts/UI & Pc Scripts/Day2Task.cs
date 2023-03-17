@@ -10,9 +10,16 @@ public class Day2Task : MonoBehaviour
     bool JoshSpook = false;
     public GameObject JoshScare;
 
+    bool Day2DoneDone = false;
+
     public bool GetJoshSpook()
     {
         return JoshSpook;
+    }
+
+    public bool GetDay2Done()
+    {
+        return Day2DoneDone;
     }
 
     bool JanitorDoor = false;
@@ -185,7 +192,10 @@ public class Day2Task : MonoBehaviour
             DoneFirewall.SetActive(true);
 
             Leave.SetActive(true);
+            Day2DoneDone = true;
         }
+
+        
 
 
     }

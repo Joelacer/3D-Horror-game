@@ -123,6 +123,7 @@ public class MessageApp : MonoBehaviour
         NewMessageJared.SetActive(false);
 
         MonsterTab = false;
+        JoshTab = false;
     }
 
     public void monstertab()
