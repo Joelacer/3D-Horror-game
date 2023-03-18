@@ -8,10 +8,11 @@ public class MessageApp : MonoBehaviour
     public GameObject TextMonster;
     public GameObject TextJaredCam;
     public GameObject TextJosh;
+    public GameObject TextJaredMonster;
 
     bool JaredTab = false;
     bool MonsterTab = false;
-    bool JaredCamTab = false;
+    //bool JaredCamTab = false;
     bool JoshTab = false;
 
     public GameObject ShowTask;
@@ -20,6 +21,7 @@ public class MessageApp : MonoBehaviour
     public GameObject NewMessageJared;
     public GameObject NewMessageMonster;
     public GameObject NewMessageJosh;
+    public GameObject NewMessageJaredMonster;
 
     public GameObject JoshMessage;
 
@@ -27,8 +29,9 @@ public class MessageApp : MonoBehaviour
 
     Day2Task day2task;
     JoshJumpscare joshjumpscare;
+    Day3Task day3task;
 
-    
+
 
     public bool GetMonsterTab()
     {
@@ -51,6 +54,7 @@ public class MessageApp : MonoBehaviour
 
         day2task = ShowTask.GetComponent<Day2Task>();
         joshjumpscare = JoshjumpscareOB.GetComponent<JoshJumpscare>();
+        day3task = ShowTask.GetComponent<Day3Task>();
     }
 
     // Update is called once per frame
@@ -107,6 +111,16 @@ public class MessageApp : MonoBehaviour
             JoshMessage.SetActive(true);
         }
 
+        // Day3
+
+        if (JaredTab == true && day3task.GetDay3() == true)
+        {
+            TextJaredMonster.SetActive(true);
+        }
+        else
+        {
+            TextJaredMonster.SetActive(false);
+        }
 
     }
 
