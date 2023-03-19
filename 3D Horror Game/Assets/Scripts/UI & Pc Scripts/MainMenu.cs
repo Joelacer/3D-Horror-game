@@ -9,10 +9,21 @@ public class MainMenu : MonoBehaviour
     public GameObject music;
     public GameObject sound;
 
+    public GameObject AboutScreen;
+
     public void office()
     {
         //SceneManager.LoadScene("Office");
         StartCoroutine(NewsPaper());
+    }
+
+    public void AboutON()
+    {
+        AboutScreen.SetActive(true);
+    }
+    public void AboutOFF()
+    {
+        AboutScreen.SetActive(false);
     }
 
     public void Quit()
@@ -27,13 +38,14 @@ public class MainMenu : MonoBehaviour
         music.SetActive(false);
         NewspaperOB.SetActive(true);
         yield return new WaitForSeconds(10f);
-        SceneManager.LoadScene("Office");
+        SceneManager.LoadScene("Day1");
     }
 
     // Start is called before the first frame update
     void Start()
     {
         NewspaperOB.SetActive(false);
+        AboutScreen.SetActive(false);
     }
 
     // Update is called once per frame

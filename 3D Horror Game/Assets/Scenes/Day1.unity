@@ -43715,9 +43715,15 @@ MonoBehaviour:
   TextJared: {fileID: 1066618611}
   TextMonster: {fileID: 1199773184}
   TextJaredCam: {fileID: 1066618611}
+  TextJosh: {fileID: 1066618611}
+  TextJaredMonster: {fileID: 1066618611}
   ShowTask: {fileID: 1459920735682579710}
+  JoshjumpscareOB: {fileID: 1066618611}
   NewMessageJared: {fileID: 1553689477}
   NewMessageMonster: {fileID: 852573877}
+  NewMessageJosh: {fileID: 1066618611}
+  NewMessageJaredMonster: {fileID: 1066618611}
+  JoshMessage: {fileID: 1066618611}
 --- !u!1 &1684026301
 GameObject:
   m_ObjectHideFlags: 0
