@@ -133,6 +133,7 @@ public class Day2Task : MonoBehaviour
             CheckMessages.SetActive(false);
 
             CleanWriting.SetActive(true);
+            Sound.PlaySound("SpookSound");
         }
 
         //Clean Writing TASK4

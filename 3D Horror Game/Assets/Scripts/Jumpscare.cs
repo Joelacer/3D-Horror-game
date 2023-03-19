@@ -12,6 +12,8 @@ public class Jumpscare : MonoBehaviour
     public GameObject Canvases;
 
     bool PlayOnce = false;
+    bool HungryOnce = false;
+    bool MonsterOnce = false;
 
     Day3Task day3task;
     public GameObject ShowTask;
@@ -51,6 +53,11 @@ public class Jumpscare : MonoBehaviour
             PlayOnce = true;
 
             Black.SetActive(true);
+            if (HungryOnce == false)
+            {
+                HungryOnce = true;
+                Sound.PlaySound("IamHungry");
+            }
             yield return new WaitForSeconds(4f);
             Black.SetActive(false);
             yield return new WaitForSeconds(1f);
@@ -62,6 +69,11 @@ public class Jumpscare : MonoBehaviour
             yield return new WaitForSeconds(1f);
             Black.SetActive(false);
             BossJumpscare.SetActive(true);
+            if (MonsterOnce == false)
+            {
+                MonsterOnce = true;
+                Sound.PlaySound("MonsterSound");
+            }
             yield return new WaitForSeconds(3f);
             Black.SetActive(true);
             yield return new WaitForSeconds(3f);

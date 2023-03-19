@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class EndSceneManager : MonoBehaviour
@@ -9,6 +10,8 @@ public class EndSceneManager : MonoBehaviour
     public GameObject By;
     public GameObject JoelacerMixu;
     public GameObject Text1;
+    public GameObject THX;
+    public GameObject Text2;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class EndSceneManager : MonoBehaviour
         Made.SetActive(false);
         By.SetActive(false);
         JoelacerMixu.SetActive(false);
+        Text2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,5 +40,8 @@ public class EndSceneManager : MonoBehaviour
         JoelacerMixu.SetActive(true);
         yield return new WaitForSeconds(3f);
         Text1.SetActive(false);
+        Text2.SetActive(true);
+        yield return new WaitForSeconds(10f);
+        SceneManager.LoadScene("MainMenu");
     }
 }
