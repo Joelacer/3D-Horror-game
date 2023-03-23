@@ -14,7 +14,7 @@ public class WalkINAnim : MonoBehaviour
     public GameObject FadeOut;
     public GameObject Black;
 
-    bool CanSkip;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,14 +27,7 @@ public class WalkINAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (CanSkip == true && Input.GetKey(KeyCode.Space))
-        {
-            CanSkip = false;
-            StopCoroutine(WalkIN());
-            Player.SetActive(true);
-            CutSceneCAM.SetActive(false);
-            animator.SetBool("WalkIN", false);
-        }
+        
     }
 
     IEnumerator WalkIN()
@@ -43,13 +36,13 @@ public class WalkINAnim : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         FadeIN.SetActive(false);
 
-        CanSkip = true;
+        
         Player.SetActive(false);
         CutSceneCAM.SetActive(true);
         animator.SetBool("WalkIN", true);
         yield return new WaitForSeconds(3f);
         Sound.PlaySound("bossStart");
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(17f);
 
         FadeOut.SetActive(true);
         yield return new WaitForSeconds(0.2f);
