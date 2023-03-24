@@ -5,6 +5,7 @@ using UnityEngine;
 public class LookAtCam : MonoBehaviour
 {
     public Transform Target;
+    public Transform Table;
 
 
 
@@ -27,6 +28,10 @@ public class LookAtCam : MonoBehaviour
         if(day1cam.GetLook() == true)
         {
             transform.LookAt(Target);
+        }
+        else
+        {
+            transform.LookAt(Table);
         }
 
         //if (day1emily.GetLook() == true)

@@ -10,6 +10,8 @@ public class Day2Task : MonoBehaviour
     bool JoshSpook = false;
     public GameObject JoshScare;
 
+    bool PlaySpookOnce = false;
+
     bool Day2DoneDone = false;
 
     public bool GetJoshSpook()
@@ -133,7 +135,12 @@ public class Day2Task : MonoBehaviour
             CheckMessages.SetActive(false);
 
             CleanWriting.SetActive(true);
-            Sound.PlaySound("SpookSound");
+
+            if (PlaySpookOnce == false)
+            {
+                PlaySpookOnce = true;
+                Sound.PlaySound("SpookSound");
+            }
         }
 
         //Clean Writing TASK4

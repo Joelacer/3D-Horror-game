@@ -43,7 +43,7 @@ public class Day1Cam : MonoBehaviour
         Look = true;
         HaveTalked = true;
         Sound.PlaySound("CamDay1Redo");
-        yield return new WaitForSeconds(14f);
+        yield return new WaitForSeconds(13f);
         Sound.PlaySound("Lucas_Cam");
         Look = false;
     }
