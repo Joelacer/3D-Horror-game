@@ -12,6 +12,7 @@ public class EndSceneManager : MonoBehaviour
     public GameObject Text1;
     public GameObject THX;
     public GameObject Text2;
+    public GameObject Text3;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class EndSceneManager : MonoBehaviour
         By.SetActive(false);
         JoelacerMixu.SetActive(false);
         Text2.SetActive(false);
+        Text3.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,7 +43,10 @@ public class EndSceneManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         Text1.SetActive(false);
         Text2.SetActive(true);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(7f);
+        Text2.SetActive(false);
+        Text3.SetActive(true);
+        yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("MainMenu");
     }
 }

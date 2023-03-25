@@ -37765,7 +37765,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402990623}
   m_LocalRotation: {x: -0, y: -0, z: 0.06584535, w: 0.99782985}
-  m_LocalPosition: {x: 3.4375, y: 1.5, z: -29.998}
+  m_LocalPosition: {x: 3.69, y: 2.47, z: -29.998}
   m_LocalScale: {x: 0.5625, y: 0.5625, z: 0.5625}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -80388,6 +80388,7 @@ MonoBehaviour:
   BroomOB: {fileID: 5530230897974436391}
   JoshscareOB: {fileID: 1076981327}
   ComputerScreenOB: {fileID: 207528715}
+  BroomOFF: {fileID: 919132148574555117}
   CheckMessages: {fileID: 151957485}
   DoneCheckMessages: {fileID: 969076009}
   CleanTrash: {fileID: 1161003832}

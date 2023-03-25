@@ -45,6 +45,7 @@ public class Day2Task : MonoBehaviour
     public GameObject JoshscareOB;
     ColorGame colorgame;
     public GameObject ComputerScreenOB;
+    public GameObject BroomOFF;
 
     public GameObject CheckMessages;
     public GameObject DoneCheckMessages;
@@ -157,7 +158,8 @@ public class Day2Task : MonoBehaviour
         if(mopping.GetCounter() == 4)
         {
             DoneBroom.SetActive(true);
-
+            BroomOFF.SetActive(false);
+            
             GoToPC.SetActive(true);
             Task6 = true;
         }
