@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction, newsPaperSound, SpookSound, JoshDay2, IamHungry, MonsterSound, Lucas_Day3Start, Lucas_LastWords, Lucas_AfterFirewall, Lucas_AfterJosh, Lucas_CamIsMissing, Lucas_FindBlood, Lucas_DoneBroom, Lucas_IShouldJanitorCloset, Lucas_CheckMessages;
+    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction, newsPaperSound, SpookSound, JoshDay2, IamHungry, MonsterSound, Lucas_Day3Start, Lucas_LastWords, Lucas_AfterFirewall, Lucas_AfterJosh, Lucas_CamIsMissing, Lucas_FindBlood, Lucas_DoneBroom, Lucas_IShouldJanitorsCloset, Lucas_CheckMessages;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -55,7 +55,7 @@ public class Sound : MonoBehaviour
         Lucas_CamIsMissing = Resources.Load<AudioClip>("Lucas_CamIsMissing");
         Lucas_FindBlood = Resources.Load<AudioClip>("Lucas_FindBlood");
         Lucas_DoneBroom = Resources.Load<AudioClip>("Lucas_DoneBroom");
-        Lucas_IShouldJanitorCloset = Resources.Load<AudioClip>("Lucas_IShouldJanitorCloset");
+        Lucas_IShouldJanitorsCloset = Resources.Load<AudioClip>("Lucas_IShouldJanitorsCloset");
         Lucas_CheckMessages = Resources.Load<AudioClip>("Lucas_CheckMessages");
 
         audioSrc = GetComponent<AudioSource>();
@@ -228,8 +228,8 @@ public class Sound : MonoBehaviour
                 audioSrc.PlayOneShot(Lucas_DoneBroom);
                 break;
 
-            case "Lucas_IShouldJanitorCloset":
-                audioSrc.PlayOneShot(Lucas_IShouldJanitorCloset);
+            case "Lucas_IShouldJanitorsCloset":
+                audioSrc.PlayOneShot(Lucas_IShouldJanitorsCloset);
                 break;
 
             case "Lucas_CheckMessages":

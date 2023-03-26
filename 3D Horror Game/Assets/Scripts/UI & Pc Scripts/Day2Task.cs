@@ -147,7 +147,7 @@ public class Day2Task : MonoBehaviour
             if (AfterTrash == false)
             {
                 AfterTrash = true;
-                Sound.PlaySound("Lucas_IShouldJanitorCloset");
+                Sound.PlaySound("Lucas_IShouldJanitorsCloset");
             }
 
         }

@@ -49,7 +49,7 @@ public class CleanText : MonoBehaviour
         Black.SetActive(false);
         fadein.SetActive(false);
         Cleaned = true;
-        yield return new WaitForSeconds(0.3f);
+        //yield return new WaitForSeconds(0.3f);
         
 
     }
