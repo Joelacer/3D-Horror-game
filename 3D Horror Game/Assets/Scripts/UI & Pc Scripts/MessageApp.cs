@@ -31,6 +31,8 @@ public class MessageApp : MonoBehaviour
     JoshJumpscare joshjumpscare;
     Day3Task day3task;
 
+    bool SoundPlayedLastWords = false;
+
 
 
     public bool GetMonsterTab()
@@ -116,6 +118,11 @@ public class MessageApp : MonoBehaviour
         if (JaredTab == true && day3task.GetDay3() == true)
         {
             TextJaredMonster.SetActive(true);
+            if (SoundPlayedLastWords == false)
+            {
+                Sound.PlaySound("Lucas_LastWords");
+                SoundPlayedLastWords = true;
+            }
         }
         else
         {

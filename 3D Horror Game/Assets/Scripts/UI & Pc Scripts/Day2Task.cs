@@ -16,6 +16,9 @@ public class Day2Task : MonoBehaviour
 
     bool BroomCanSound = true;
 
+    bool soundFirePlayed = false;
+    bool soundAfterJoshPlayed = false;
+
     public bool GetBroomCanSound()
     {
         return BroomCanSound;
@@ -169,7 +172,7 @@ public class Day2Task : MonoBehaviour
             BroomCanSound = false;
             GoToPC.SetActive(true);
             Task6 = true;
-            Destroy(BroomOFF);
+            //Destroy(BroomOFF);
         }
 
         //Go To PC TASK6
@@ -201,6 +204,11 @@ public class Day2Task : MonoBehaviour
         {
             JoshSpook = false;
             Task6 = false;
+            if (soundAfterJoshPlayed == false)
+            {
+                soundAfterJoshPlayed = true;
+                Sound.PlaySound("Lucas_AfterJosh");
+            }
         }
 
         //Help with firewall TASK7
@@ -211,6 +219,12 @@ public class Day2Task : MonoBehaviour
 
             Leave.SetActive(true);
             Day2DoneDone = true;
+
+            if (soundFirePlayed == false)
+            {
+                Sound.PlaySound("Lucas_AfterFirewall");
+                soundFirePlayed = true;
+            }
         }
 
         

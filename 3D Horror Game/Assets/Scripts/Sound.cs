@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction, newsPaperSound, SpookSound, JoshDay2, IamHungry, MonsterSound;
+    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction, newsPaperSound, SpookSound, JoshDay2, IamHungry, MonsterSound, Lucas_Day3Start, Lucas_LastWords, Lucas_AfterFirewall, Lucas_AfterJosh;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -46,6 +46,11 @@ public class Sound : MonoBehaviour
 
         IamHungry = Resources.Load<AudioClip>("IamHungry");
         MonsterSound = Resources.Load<AudioClip>("MonsterSound");
+
+        Lucas_Day3Start = Resources.Load<AudioClip>("Lucas_Day3Start");
+        Lucas_LastWords = Resources.Load<AudioClip>("Lucas_LastWords");
+        Lucas_AfterFirewall = Resources.Load<AudioClip>("Lucas_AfterFirewall");
+        Lucas_AfterJosh = Resources.Load<AudioClip>("Lucas_AfterJosh");
 
         audioSrc = GetComponent<AudioSource>();
     }
@@ -184,6 +189,25 @@ public class Sound : MonoBehaviour
 
             case "MonsterSound":
                 audioSrc.PlayOneShot(MonsterSound);
+                break;
+
+
+
+
+            case "Lucas_Day3Start":
+                audioSrc.PlayOneShot(Lucas_Day3Start);
+                break;
+
+            case "Lucas_LastWords":
+                audioSrc.PlayOneShot(Lucas_LastWords);
+                break;
+
+            case "Lucas_AfterFirewall":
+                audioSrc.PlayOneShot(Lucas_AfterFirewall);
+                break;
+
+            case "Lucas_AfterJosh":
+                audioSrc.PlayOneShot(Lucas_AfterJosh);
                 break;
 
         }

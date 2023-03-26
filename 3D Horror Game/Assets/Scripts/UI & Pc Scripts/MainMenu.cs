@@ -46,6 +46,7 @@ public class MainMenu : MonoBehaviour
     {
         NewspaperOB.SetActive(false);
         AboutScreen.SetActive(false);
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
