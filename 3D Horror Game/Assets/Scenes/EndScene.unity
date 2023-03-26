@@ -273,7 +273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &85115248
 Transform:
   m_ObjectHideFlags: 0
@@ -1156,7 +1156,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1106542709
 Transform:
   m_ObjectHideFlags: 0
@@ -1565,10 +1565,9 @@ MonoBehaviour:
   m_text: "Paper airplane by Poly by Google [CC-BY] via Poly Pizza\nTrash Can by
     Zoe XR [CC-BY] via Poly Pizza\nCrushed Soda Can by Thermo_DynAmics [CC-BY] via
     Poly Pizza\nCoffee cup by Poly by Google [CC-BY] via Poly Pizza\nIndustrial Broom
-    by Jarlan Perez [CC-BY] via Poly Pizza\nMusic:\nEsitt\xE4j\xE4n Kevin MacLeod
-    kappale Industrial Music Box on suojattu lisenssill\xE4 Creative Commons Attribution
-    4.0. https://creativecommons.org/licenses/by/4.0/\r\n\r\nL\xE4hde: http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100812\r\n\r\nArtisti:
-    http://incompetech.com/\n\n\n"
+    by Jarlan Perez [CC-BY] via Poly Pizza\nComputer by Poly by Google [CC-BY] via
+    Poly Pizza\nMusic:\nhttp://incompetech.com/music/royalty-free/index.html?isrc\n=USUAN1100812\r\n\rartist:
+    http://incompetech.com/\nMusic By: Kevin MacLeod\n\nRoom tone by: Stomachache\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1631,7 +1630,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -518.1974, y: 0, z: -1503.8909, w: -598.2153}
+  m_margin: {x: -518.1974, y: 0, z: -1503.8909, w: -819.91644}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -56587,6 +56587,7 @@ MonoBehaviour:
   Broom: {fileID: 919132148574555117}
   isMopping: 0
   MopisOn: 0
+  Day2TaskOB: {fileID: 1459920735682579710}
   MopCounter: 0
   CleanCounter: 0
   SoundCooldown: 1

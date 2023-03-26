@@ -7,6 +7,10 @@ public class Mopping : MonoBehaviour
     public GameObject Broom;
     public bool isMopping = false;
     public bool MopisOn;
+
+    Day2Task day2task;
+    public GameObject Day2TaskOB;
+
     
     public float MopCounter = 0;
     public int CleanCounter = 0;
@@ -17,6 +21,7 @@ public class Mopping : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        day2task = Day2TaskOB.GetComponent<Day2Task>();
         Broom.SetActive(false);
         MopisOn = false;
     }
@@ -46,7 +51,7 @@ public class Mopping : MonoBehaviour
           
         }
 
-        if(isMopping == true && MopisOn == true && soundplayed == false)
+        if(isMopping == true && MopisOn == true && soundplayed == false && day2task.GetBroomCanSound() == true)
         {
             StartCoroutine(sound());
         }

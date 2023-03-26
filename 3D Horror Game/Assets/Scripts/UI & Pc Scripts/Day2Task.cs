@@ -14,6 +14,13 @@ public class Day2Task : MonoBehaviour
 
     bool Day2DoneDone = false;
 
+    bool BroomCanSound = true;
+
+    public bool GetBroomCanSound()
+    {
+        return BroomCanSound;
+    }
+
     public bool GetJoshSpook()
     {
         return JoshSpook;
@@ -159,9 +166,10 @@ public class Day2Task : MonoBehaviour
         {
             DoneBroom.SetActive(true);
             BroomOFF.SetActive(false);
-            
+            BroomCanSound = false;
             GoToPC.SetActive(true);
             Task6 = true;
+            Destroy(BroomOFF);
         }
 
         //Go To PC TASK6
