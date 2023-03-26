@@ -22,6 +22,7 @@ public class Day2Start : MonoBehaviour
         black.SetActive(false);
         yield return new WaitForSeconds(0.5f);
         fadein.SetActive(false);
+        Sound.PlaySound("Lucas_CheckMessages");
     }
 
     // Update is called once per frame

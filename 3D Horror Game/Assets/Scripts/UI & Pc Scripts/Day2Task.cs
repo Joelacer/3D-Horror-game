@@ -12,6 +12,12 @@ public class Day2Task : MonoBehaviour
 
     bool PlaySpookOnce = false;
 
+    bool AfterBroom = false;
+
+    bool CheckMessagesOnce = false;
+
+    bool AfterTrash= false;
+
     bool Day2DoneDone = false;
 
     bool BroomCanSound = true;
@@ -121,6 +127,13 @@ public class Day2Task : MonoBehaviour
         {
             DoneCheckMessages.SetActive(true);
             CleanTrash.SetActive(true);
+
+            if (CheckMessagesOnce == false)
+                {
+                    CheckMessagesOnce = true;
+                    Sound.PlaySound("Lucas_CamIsMissing");
+                }
+               
         }
 
         //Clean Trash TASK2
@@ -130,6 +143,13 @@ public class Day2Task : MonoBehaviour
             DoneCleanTrash.SetActive(true);
             JanitorDoor = true;
             GoGetBroom.SetActive(true);
+
+            if (AfterTrash == false)
+            {
+                AfterTrash = true;
+                Sound.PlaySound("Lucas_IShouldJanitorCloset");
+            }
+
         }
 
         //Get Broom TASK3
@@ -151,6 +171,7 @@ public class Day2Task : MonoBehaviour
             {
                 PlaySpookOnce = true;
                 Sound.PlaySound("SpookSound");
+                Sound.PlaySound("Lucas_FindBlood");
             }
         }
 
@@ -172,6 +193,13 @@ public class Day2Task : MonoBehaviour
             BroomCanSound = false;
             GoToPC.SetActive(true);
             Task6 = true;
+
+            if (AfterBroom == false)
+            {
+                AfterBroom = true;
+                Sound.PlaySound("Lucas_DoneBroom");
+            }
+            
             //Destroy(BroomOFF);
         }
 

@@ -52,6 +52,12 @@ public class Sound : MonoBehaviour
         Lucas_AfterFirewall = Resources.Load<AudioClip>("Lucas_AfterFirewall");
         Lucas_AfterJosh = Resources.Load<AudioClip>("Lucas_AfterJosh");
 
+        Lucas_CamIsMissing = Resources.Load<AudioClip>("Lucas_CamIsMissing");
+        Lucas_FindBlood = Resources.Load<AudioClip>("Lucas_FindBlood");
+        Lucas_DoneBroom = Resources.Load<AudioClip>("Lucas_DoneBroom");
+        Lucas_IShouldJanitorCloset = Resources.Load<AudioClip>("Lucas_IShouldJanitorCloset");
+        Lucas_CheckMessages = Resources.Load<AudioClip>("Lucas_CheckMessages");
+
         audioSrc = GetComponent<AudioSource>();
     }
 
