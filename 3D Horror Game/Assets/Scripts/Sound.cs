@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction, newsPaperSound, SpookSound, JoshDay2, IamHungry, MonsterSound, Lucas_Day3Start, Lucas_LastWords, Lucas_AfterFirewall, Lucas_AfterJosh;
+    public static AudioClip Broom, DoorOpen, DoorClose, Button, ButtonWrong, Step, CanIHelpU, bossStart, CamDay1Redo, JoshDay1, Lucas_Emily, Lucas_FixGame_2, Lucas_FixGame_3, Lucas_FixGame_Done, Lucas_FixGame_Start, Lucas_Henry, Lucas_Josh, Lucas_Cam, Henry_Lucas, MSG_Sound, Lucas_Msg, Lucas_Msg_Reaction, newsPaperSound, SpookSound, JoshDay2, IamHungry, MonsterSound, Lucas_Day3Start, Lucas_LastWords, Lucas_AfterFirewall, Lucas_AfterJosh, Lucas_CamIsMissing, Lucas_FindBlood, Lucas_DoneBroom, Lucas_IShouldJanitorCloset, Lucas_CheckMessages;
     static AudioSource audioSrc;
 
     // Start is called before the first frame update
@@ -208,6 +208,26 @@ public class Sound : MonoBehaviour
 
             case "Lucas_AfterJosh":
                 audioSrc.PlayOneShot(Lucas_AfterJosh);
+                break;
+
+            case "Lucas_CamIsMissing":
+                audioSrc.PlayOneShot(Lucas_CamIsMissing);
+                break;
+
+            case "Lucas_FindBlood":
+                audioSrc.PlayOneShot(Lucas_FindBlood);
+                break;
+
+            case "Lucas_DoneBroom":
+                audioSrc.PlayOneShot(Lucas_DoneBroom);
+                break;
+
+            case "Lucas_IShouldJanitorCloset":
+                audioSrc.PlayOneShot(Lucas_IShouldJanitorCloset);
+                break;
+
+            case "Lucas_CheckMessages":
+                audioSrc.PlayOneShot(Lucas_CheckMessages);
                 break;
 
         }
